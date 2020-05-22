@@ -6,6 +6,7 @@
     <title>OMM NOM</title>
     <link rel="stylesheet" href="./style/basic.css">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg">
 </head>
 <body>
     <div class="wrapper">
@@ -24,7 +25,7 @@
         <!-- Main screen -->
         <section class="main">
             <div class="main__bc">
-                <img src="./img/main-bc.png" alt="">
+                <!-- <img src="./img/main-bc.png" alt=""> -->
             </div>
             <div class="main__centre">
                 <img src="./img/logo-blue.svg" alt="">
@@ -37,45 +38,45 @@
                 ОММ НОМ&nbsp;&mdash; конфетный магазин идей, где вы&nbsp;найдете различные сладости, которые помогут вам ответить на&nbsp;вопрос как и&nbsp;придумать что-то невероятное
             </p>
             <div class="catalog__menu">
-                <ul>
-                    <li>
-                        <a href="./pages/catalog.html">Конфеты</a>
-                    </li>
-                    <li>
-                        <a href="./pages/catalog.html">Шоколад</a>
-                    </li>
-                    <li>
-                        <a href="./pages/catalog.html">Батончики</a>
-                    </li>
-                    <li>
-                        <a href="./pages/catalog.html">Мармелад</a>
-                    </li>
-                </ul>
+                <div class="catalog__menu__links">
+                    <a href="./pages/catalog.html" class="catalog__menu__link catalog__menu__link-candy">Конфеты</a>
+                    <a href="./pages/catalog.html" class="catalog__menu__link link">Шоколад</a>
+                    <a href="./pages/catalog.html" class="catalog__menu__link link">Батончики</a>
+                    <a href="./pages/catalog.html" class="catalog__menu__link link">Мармелад</a>
+                </div>
             </div>
             <div class="catalog__back">
-               <div class="section__catalog__back__hover candy">
+                <div class="catalog__back__wave">
+                    <img src="./img/grey-wave.svg" alt="">
+                </div>
+                <div class="catalog__back__wave">
+                    <img src="./img/grey-wave.svg" alt="">
+                </div>
+               <!-- <div class="catalog__back__hover catalog__back__hover-candy">
                    <img src="./img/main-Catolog-Candy1.png" alt="">
                    <img src="./img/main-Catolog-Candy2.png" alt="">
                    <img src="./img/main-Catolog-Candy3.png" alt="">
                </div>
-               <div class="section__catalog__back__hover choc">
+               <div class="catalog__back__hover catalog__back__hover-choc">
                    <img src="./img/main-Catolog-Choc1.png" alt="">
                    <img src="./img/main-Catolog-Choc2.png" alt="">
                    <img src="./img/main-Catolog-Choc3.png" alt="">
                </div>
-               <div class="section__catalog__back__hover bars">
+               <div class="catalog__back__hover catalog__back__hover-bars">
                 <img src="./img/main-Catolog-Bar1.png" alt="">
                 <img src="./img/main-Catolog-Bar2.png" alt="">
                 <img src="./img/main-Catolog-Bar3.png" alt="">
                </div>
-               <div class="section__catalog__back__hover mar">
+               <div class="catalog__back__hover catalog__back__hover-mar">
                 <img src="./img/main-Catolog-Mar1.png" alt="">
                 <img src="./img/main-Catolog-Mar2.png" alt="">
                 <img src="./img/main-Catolog-Mar3.png" alt="">
-               </div>
+               </div> -->
             </div>
 
-            <a href="./pages/catalog.html">посмотреть все идеи</a>
+            <div class="link_to">
+                <a href="./pages/catalog.html">посмотреть все идеи</a>
+            </div>
         </section>
 
         <!-- waves -->
@@ -87,52 +88,68 @@
         <section class="new">
             <h2>Новинки</h2>
             <p>Ловите мышкой новые идеи и&nbsp;смотрите наши новинки</p>
-            <a href="" class="new__candy">
-                <div class="section__new__candy__img"></div>
-                <div class="section__new__candy__text">
-                    <h4>Карамельные реки</h4>
-                    <p>Текучая карамель, заключенная в&nbsp;молочном шоколаде даст вам ежедневные идеи</p>
-                    <p>Цена за 100 гр:</p>
-                    <p>300р</p>
-                </div>
-            </a>
-            <a href="" class="new__candy">
-                <div class="section__new__candy__img"></div>
-                <div class="section__new__candy__text">
-                    <h4>Клубичное безумие</h4>
-                    <p>Нужный клубничный мусс с&nbsp;острым перцем превнесут в&nbsp;вашу жизнь огня</p>
-                    <p>Цена за 100 гр:</p>
-                    <p>350р</p>
-                </div>
-            </a>
-            <a href="" class="new__candy">
-                <div class="section__new__candy__img"></div>
-                <div class="section__new__candy__text">
-                    <h4>Творческий взрыв</h4>
-                    <p>Удивительное сочетание киви и&nbsp;белого шоколада подарят вам яркие идеи</p>
-                    <p>Цена за 100 гр:</p>
-                    <p>280р</p>
-                </div>
-            </a>
+            <div class="new__candies">
+                <a href="" class="new__candy">
+                    <div class="new__candy__img new__candy__img__one"></div>
+                    <div class="new__candy__text">
+                        <h4>Карамельные реки</h4>
+                        <p>Текучая карамель, заключенная в&nbsp;молочном шоколаде даст вам ежедневные идеи</p>
+                        <div>
+                            <p>Цена за 100 гр:</p>
+                            <p>300р</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="new__candy new__candy__two">
+                    <div class="new__candy__img new__candy__img__two"></div>
+                    <div class="new__candy__text">
+                        <h4>Клубичное безумие</h4>
+                        <p>Нужный клубничный мусс с&nbsp;острым перцем превнесут в&nbsp;вашу жизнь огня</p>
+                        <div>
+                            <p>Цена за 100 гр:</p>
+                            <p>350р</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="" class="new__candy new__candy__three">
+                    <div class="new__candy__img new__candy__img__three"></div>
+                    <div class="new__candy__text">
+                        <h4>Творческий взрыв</h4>
+                        <p>Удивительное сочетание киви и&nbsp;белого шоколада подарят вам яркие идеи</p>
+                        <div>
+                            <p>Цена за 100 гр:</p>
+                            <p>280р</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-            <a href="./pages/catalog.html">к каталогу</a>
+            <div class="link_to">
+                <a href="./pages/catalog.html">к каталогу</a>
+            </div>
         </section>
 
         <!-- about -->
-        <section class="about">
-            <div class="about__text">
-                <h2>почему нас выбирают</h2>
-                <p>Мы&nbsp;дарим людям идеи, которые, порой, спасают жизни. Мы&nbsp;знаем, насколько иногда бывает сложно придумать что-либо, поэтому и&nbsp;приходим Вам на&nbsp;помощь</p>
-                <a href="./pages/about.html">наша история</a>
-            </div>
-            <div class="about__pic">
-                <div class="about__pic__rect"></div>
-                <img src="./img/main-Choose.png" alt="">
-            </div>
-
-            <div class="grey-circle"></div>
-            <div class="grey-circle"></div>
-        </section>
+        <div class="about__wrapper">
+            <section class="about">
+                <div class="about__content">
+                    <div class="about__text">
+                        <h2>почему нас выбирают</h2>
+                        <p>Мы&nbsp;дарим людям идеи, которые, порой, спасают жизни. Мы&nbsp;знаем, насколько иногда бывает сложно придумать что-либо, поэтому и&nbsp;приходим Вам на&nbsp;помощь</p>
+                    </div>
+                    <div class="about__pic">
+                        <div class="about__pic__rect"></div>
+                        <img src="./img/main-Choose.png" alt="">
+                    </div>
+                </div>
+                <div class="link_to">
+                    <a href="./pages/about.html">наша история</a>
+                </div>
+    
+                <div class="grey-circle"></div>
+                <div class="grey-circle"></div>
+            </section>
+        </div>
 
         <!-- features -->
         <section class="features">

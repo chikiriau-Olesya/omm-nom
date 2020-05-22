@@ -1,4 +1,371 @@
 /* styles for main page */
 
+
 /* add basic styles which are used in all pages */
 @import "basic.css";
+
+
+body {
+    transition: all 0.2s;
+}
+
+section{
+    grid-column: 3 / 4;
+    margin-bottom: 10%;
+}
+
+/* MAIN SECTION STYLES */
+.main { 
+    grid-column: 1 / 6;
+    position: relative;
+}
+
+.main__bc {
+    background-image: url(../img/main-bc.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 94vh;
+}
+
+.main__centre {
+    position: absolute;
+    top: 40.5%;
+    left: 43.7%;
+}
+
+
+
+/* CATALOG SECTION STYLES */
+
+.catalog > p {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+
+    color: var(--blue);
+    font-size: 21px;
+}
+  /* menu */
+.catalog__menu {
+    position: absolute;
+    z-index: 2;
+    height: 22vw;
+    width: 30vw;
+    margin-top: 5%;
+
+    background-color: var(--grey);
+}
+
+.catalog__menu__links {
+    padding: 13%;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog__menu a {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--blue);
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.catalog__menu__link:hover {
+    color: var(--pink);
+}
+
+.catalog__menu__link:hover.catalog__menu__link::after {
+    content: '';
+    position: absolute;
+    top: 33%;
+    margin-left: 7%;
+    width: 23px;
+    height: 17px;
+  
+    background-image: url(../img/link-arrow-pink.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: all 0.2s;
+}
+
+.catalog__menu__hover {
+    position: absolute;
+    transform: translate(30vw, 7vw);
+    display: flex;
+    visibility: hidden;
+}
+
+
+  /* menu background */
+.catalog__back {
+    background-color: var(--blue);
+    align-items: end;
+    margin: 0 auto;
+    margin-top: 11%;
+    width: 68vw;
+    height: 27vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catalog__back__wave {
+    margin: 0 auto;
+}
+
+.catalog__back__wave img {
+    width: 63vw;
+}
+
+.catalog__back__wave img:first-of-type {
+    padding-top: 1vw;
+}
+.catalog__back__wave img:last-of-type {
+    padding-bottom: 1vw;
+}
+
+
+/* down link */
+.link_to {
+    text-align: end;
+    margin-top: 7%;
+    position: relative;
+}
+
+.link_to a::after{
+    content: '';
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 2px;
+    width: 20px;
+    height: 14px;
+  
+    background-image: url(../img/links-arrow.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: all 0.2s;
+}
+
+.link_to:hover a{
+    color: var(--pink);
+}
+
+.link_to:hover a::after{
+    background-image: url(../img/link-arrow-pink.svg);
+}
+
+
+
+/* GIF WAVES */
+.waves {
+    grid-column: 1 / 6;
+    margin-bottom: 5%;
+    overflow-x: hidden;
+}
+
+
+/* NEW SECTION STYLES */
+.new h2 {
+    margin: 0 auto;
+    text-align: center;
+    color: var(--blue);
+}
+
+.new > p {
+    width: 10vw;
+    color: var(--blue);
+}
+   /* candies photo */
+.new__candies {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    height: 34vw;
+}
+
+.new__candy {
+    animation: candy 6s linear infinite;
+}
+
+.new__candy__two {
+    animation-delay: 2s;
+}
+
+.new__candy__three {
+    animation-delay: 1s;
+}
+  /* animation candy */
+@keyframes candy {
+    0% {
+       padding-top: 0%;
+    }
+    25% {
+        padding-top: 10%;
+    }
+    50% {
+        padding-top: 20%;
+    }
+    75% {
+        padding-top: 10%;
+    }
+    100% {
+        padding-top: 0%;
+    }
+}
+
+.new__candy__img {
+    width: 12vw;
+    height: 10.5vw;
+    background-image: url(../img/main-New1-black.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.new__candy__img__two {
+    background-image: url(../img/main-New2-black.png);
+}
+
+.new__candy__img__three {
+    width: 11vw;
+    background-image: url(../img/main-New3-black.png);
+}
+
+  /* text styles */
+.new__candy__text {
+    text-transform: none;
+    width: 16vw;
+    transform: translate(6vw, 1vw);
+    display: none;
+}
+
+.new__candy__text h4 {
+    font-size: 21px;
+}
+
+.new__candy__text p {
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 9px;
+}
+
+.new__candy__text div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.new__candy__text div p{
+    font-weight: 500;
+}
+
+.new__candy__text div p:last-of-type{
+    font-size: 21px;
+}
+
+   /* candies all hover things */
+.new__candy:hover {
+    animation-play-state: paused;
+}
+
+.new__candy:hover .new__candy__img {
+    background-image: url(../img/main-New1-color.png);
+}
+
+.new__candy:hover .new__candy__img__two {
+    background-image: url(../img/main-New2-color.png);
+}
+
+.new__candy:hover .new__candy__img__three {
+    background-image: url(../img/main-New3-color.png);
+}
+
+.new__candy:hover .new__candy__text{
+    display: block;
+}
+
+
+
+/* ABOUT SECTION STYLES */
+.about__wrapper {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 4% 6% 80% 6% 4%;
+    background-color: var(--pink);
+    margin-bottom: 7%;
+}
+
+.about {
+    margin-top: 10%;
+    color: white;
+    margin-bottom: 3%;
+}
+
+.about a {
+    color: white;
+}
+
+.about__content {
+    display: flex;
+}
+
+.about__text {
+    width: 40%;
+    margin-right: 5vw;
+    font-size: 21px;
+}
+
+.about__text h2 {
+    margin-bottom: 1vw;
+    font-size: 36px;
+}
+
+.about__pic {
+    position: relative;
+}
+
+.about__pic__rect {
+    margin-left: 7vw;
+    width: 37vw;
+    height: 35vw;
+    background-color: white;
+}
+
+.about__pic img {
+    position: absolute;
+    top: 20%;
+    width: 36vw;
+}
+
+.about .link_to {
+    text-align: start;
+}
+
+/* FEATURES SECTION STYLES */
+
+/* EVENTS SECTION STYLES */
+
+
+/* WAVE ELEMENT */
+.wave {
+    grid-column: 1 / 4;
+    overflow-x: hidden;
+}
+
+/* WEB-POSTER */
+.web-poster {
+    overflow-x: hidden;
+    grid-column: 1 / 4;
+}
+
+/* CONTACTS SECTION STYLES */
+
+/* FOOTER STYLES */
+
+

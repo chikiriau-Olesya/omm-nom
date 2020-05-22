@@ -3,7 +3,81 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
 
+:root {
+    --pink: #EB3762;
+    --blue: #0024B1;
+    --grey: #CFD2D8;
+}
+
+/* basic styles */
+
 body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
 }
+
+a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* wrapper main view zone */
+.wrapper {
+    display: grid;
+    grid-template-columns: 4% 6% 80% 6% 4%;
+}
+
+
+/* header styles */
+
+header {
+    grid-column: 2 / 5;
+    width: 100%;
+    padding: 5px 0 5px;
+    align-items: center;
+    display: flex;
+}
+
+.header__link {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    color: black;
+    position: relative;
+    margin-right: 4%;
+}
+
+.header__link:nth-child(4) {
+    margin-left: 24%;
+    text-align: center;
+}
+
+.header__link:nth-of-type(5) {
+    margin: 0 auto;
+    margin-right: 0;
+}
+
+.header__link:hover {
+    color: var(--blue);
+}
+
+
+
+
+footer {
+    grid-column: 2 / 5;
+}
+
