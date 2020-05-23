@@ -348,20 +348,140 @@ section{
 }
 
 /* FEATURES SECTION STYLES */
+.features {
+    grid-column: 1 / 6;
+    color: var(--pink);
+    font-size: 130px;
+    font-weight: 600;
+    overflow-x: hidden;
+}
+
 
 /* EVENTS SECTION STYLES */
+.events__wrapper {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 4% 6% 80% 6% 4%;
+    background-color: var(--pink);
+    margin-bottom: 3%;
+    color: white;
+}
 
+.events__wrapper a {
+    color: white;
+}
+
+.events {
+    margin-top: 10%;
+    color: white;
+    margin-bottom: 3%;
+}
+
+.events__content {
+    display: flex;
+}
+  
+   /* all left text styles */
+.events__text {
+    width: 40%;
+    margin-right: 5vw;
+    font-size: 21px;
+}
+
+.events__text h2 {
+    margin-bottom: 1vw;
+    font-size: 36px;
+}
+
+.events__text__links {
+    margin-top: 27%;
+    display: flex;
+    flex-direction: column;
+}
+
+.events__text__links a {
+    margin-bottom: 3vw;
+}
+
+  /* all styles for right pictures */
+.events__pic {
+    position: relative;
+}
+
+.events__pic__rect {
+    margin-left: 7vw;
+    width: 37vw;
+    height: 35vw;
+    background-color: white;
+}
+
+.events__pic img {
+    position: absolute;
+    top: 20%;
+    width: 36vw;
+}
+
+.events .link_to {
+    text-align: start;
+}
 
 /* WAVE ELEMENT */
 .wave {
-    grid-column: 1 / 4;
+    grid-column: 1 / 6;
     overflow-x: hidden;
+    margin-bottom: 3%;
+}
+
+/* REVIEWS STYLES */
+
+.reviews__wrapper {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 4% 6% 80% 6% 4%;
+    background-color: var(--blue);
+}
+
+.reviews {
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+.reviews h2 {
+    color: white;
+    margin-bottom: 3vw;
+}
+
+.reviews__block {
+    color: var(--blue);
+    margin-bottom: 2vw;
+    position: relative;
+}
+.reviews__block:nth-of-type(even) {
+    text-align: end;
+}
+
+.reviews__block p {
+    width: 27%;
+    position: absolute;
+    padding: 3% 7%;
+}
+
+.reviews__block:nth-of-type(even) p {
+    right: 0;
 }
 
 /* WEB-POSTER */
 .web-poster {
-    overflow-x: hidden;
-    grid-column: 1 / 4;
+    overflow: hidden;
+    grid-column: 1 / 6;
+    background-color: var(--pink);
+    font-size: 28px;
+}
+
+.web-poster a {
+    font-size: 28px;
+    color: white;
+    padding: 1vw;
 }
 
 /* CONTACTS SECTION STYLES */
