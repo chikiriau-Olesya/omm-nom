@@ -14,7 +14,10 @@ section{
     margin-bottom: 10%;
 }
 
+
+
 /* MAIN SECTION STYLES */
+
 .main { 
     grid-column: 1 / 6;
     position: relative;
@@ -64,20 +67,25 @@ section{
     flex-direction: column;
 }
 
-.catalog__menu a {
-    text-transform: uppercase;
-    font-size: 28px;
-    font-weight: 500;
-    color: var(--blue);
-    position: relative;
+   /* all content in block (link & pictures) */
+
+.catalog__menu__links__block {
     margin-bottom: 5%;
+    position: relative;
 }
 
-.catalog__menu__link:hover {
+.catalog__menu__links__block a {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.catalog__menu__links__block:hover a{
     color: var(--pink);
 }
 
-.catalog__menu__link:hover.catalog__menu__link::after {
+.catalog__menu__links__block:hover a::after {
     content: '';
     position: absolute;
     top: 33%;
@@ -92,12 +100,49 @@ section{
     transition: all 0.2s;
 }
 
-.catalog__menu__hover {
+.catalog__menu__links__block-hover {
     position: absolute;
     transform: translate(30vw, 7vw);
     display: flex;
-    visibility: hidden;
+    opacity: 0;
+    margin-right: 2vw;
 }
+
+   /* edit posistion of pictures */
+
+.catalog__menu__links__block-hover-choc {
+    transform: translate(30vw, 4vw);
+}
+
+.catalog__menu__links__block-hover-bars {
+    transform: translate(30vw, 1vw);
+}
+
+.catalog__menu__links__block-hover-mar {
+    transform: translate(30vw, -2vw);
+}
+
+.catalog__menu__links__block-hover img {
+    width: 9vw;
+    margin-left: 2vw;
+}
+
+.catalog__menu__links__block-candy:hover .catalog__menu__links__block-hover {
+    opacity: 1;
+} 
+
+.catalog__menu__links__block-choc:hover .catalog__menu__links__block-hover {
+    opacity: 1;
+}
+
+.catalog__menu__links__block-bars:hover .catalog__menu__links__block-hover {
+    opacity: 1;
+}
+
+.catalog__menu__links__block-mar:hover .catalog__menu__links__block-hover {
+    opacity: 1;
+}
+
 
 
   /* menu background */
@@ -163,6 +208,7 @@ section{
 
 
 /* GIF WAVES */
+
 .waves {
     grid-column: 1 / 6;
     margin-bottom: 5%;
@@ -170,7 +216,9 @@ section{
 }
 
 
+
 /* NEW SECTION STYLES */
+
 .new h2 {
     margin: 0 auto;
     text-align: center;
@@ -181,6 +229,7 @@ section{
     width: 10vw;
     color: var(--blue);
 }
+
    /* candies photo */
 .new__candies {
     display: flex;
@@ -200,6 +249,7 @@ section{
 .new__candy__three {
     animation-delay: 1s;
 }
+
   /* animation candy */
 @keyframes candy {
     0% {
@@ -293,6 +343,7 @@ section{
 
 
 /* ABOUT SECTION STYLES */
+
 .about__wrapper {
     grid-column: 1 / 6;
     display: grid;
@@ -347,17 +398,25 @@ section{
     text-align: start;
 }
 
+
+
 /* FEATURES SECTION STYLES */
+
 .features {
     grid-column: 1 / 6;
     color: var(--pink);
-    font-size: 130px;
     font-weight: 600;
     overflow-x: hidden;
 }
 
+.features p {
+    font-size: 130px;
+}
+
+
 
 /* EVENTS SECTION STYLES */
+
 .events__wrapper {
     grid-column: 1 / 6;
     display: grid;
@@ -374,7 +433,7 @@ section{
 .events {
     margin-top: 10%;
     color: white;
-    margin-bottom: 3%;
+    margin-bottom: 7%;
 }
 
 .events__content {
@@ -425,12 +484,16 @@ section{
     text-align: start;
 }
 
+
+
 /* WAVE ELEMENT */
 .wave {
     grid-column: 1 / 6;
     overflow-x: hidden;
     margin-bottom: 3%;
 }
+
+
 
 /* REVIEWS STYLES */
 
@@ -456,6 +519,7 @@ section{
     margin-bottom: 2vw;
     position: relative;
 }
+
 .reviews__block:nth-of-type(even) {
     text-align: end;
 }
@@ -464,6 +528,7 @@ section{
     width: 27%;
     position: absolute;
     padding: 3% 7%;
+    text-align: start;
 }
 
 .reviews__block:nth-of-type(even) p {
@@ -484,8 +549,93 @@ section{
     padding: 1vw;
 }
 
+
 /* CONTACTS SECTION STYLES */
 
-/* FOOTER STYLES */
+.contacts__wrapper {
+    grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 4% 6% 80% 6% 4%;
+    background-color: var(--grey);
+    margin-bottom: 6%;
+}
+
+.contacts__wrapper a {
+    color: var(--blue);
+}
+
+.contacts {
+    margin-top: 10%;
+    margin-bottom: 12%;
+    margin-left: -2.5vw;
+    display: flex;
+}
+
+.contacts__text {
+    background-color: white;
+    padding: 3%;
+    width: 40%;
+}
+
+.contacts__text h2 {
+    margin-bottom: 1vw;
+}
+
+.contacts__text__btn {
+    color: var(--blue);
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    margin-top: 4vw;
+    cursor: pointer;
+}
+
+.contacts__text__btn div:hover {
+    color: var(--pink);
+}
+
+.contacts__text__btn div {
+    margin-right: 5vw;
+}
+
+.contacts__time {
+    position: relative;
+    margin-left: 10vw;
+}
+
+.contacts__time div {
+    position: absolute;
+}
+
+.contacts__time p {
+    color: white;
+    font-size: 140px;
+    font-weight: 500;
+}
+
+.contacts__time__monday,
+.contacts__time__saturday {
+    visibility: hidden;
+}
+
+.contacts__time__monday p:first-of-type {
+    transform: rotate(10deg);
+    margin-bottom: 1vw;
+}
+
+.contacts__time__monday p:nth-of-type(2){
+    transform: rotate(-4deg);
+}
+
+.contacts__time__saturday p:first-of-type {
+    transform: rotate(-8deg);
+    margin-bottom: 1vw;
+}
+
+.contacts__time__saturday p:nth-of-type(2){
+    transform: rotate(4deg);
+}
+
 
 
