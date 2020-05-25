@@ -28,13 +28,13 @@ a {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 2.8vw;
     text-transform: uppercase;
     font-weight: 500;
 }
 
 p {
-    font-size: 21px;
+    font-size: 1.5vw;
 }
 
 /* wrapper main view zone */
@@ -46,18 +46,23 @@ p {
 
 /* HEADER STYLES */
 
+.header__menu {
+    display: none;
+}
+
 header {
     grid-column: 2 / 5;
     width: 100%;
     padding: 5px 0 5px;
     align-items: center;
     display: flex;
+    height: 5vw;
 }
 
 .header__link {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 1vw;
     line-height: 25px;
     color: black;
     position: relative;
@@ -91,7 +96,6 @@ footer {
     width: 100%;
     display: grid;
     grid-template-columns: 4% repeat(6, 15.3%) 4%;
-    grid-row: 1fr;
     grid-template-rows: 1fr;
     margin-bottom: 2vw;
 }
@@ -184,3 +188,63 @@ footer {
     font-size: 21px;
 }
 
+@media(max-width: 768px) {
+
+    p {
+        font-size: 2.8vw;
+    }
+
+    h2 {
+        font-size: 3.8vw;
+    }
+
+    section {
+        margin-bottom: 15%
+    }
+
+    .wrapper {
+        grid-template-columns: 4% 6% 80% 6% 4%;
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+        position: fixed;
+        z-index: 10;
+        background-color: white;
+        padding: 2vw 0vw;
+    }
+
+    .header a {
+        display: none;
+    }
+
+    .header__menu {
+        display: block;
+        margin: 0 auto;
+        margin-right: 2vw;
+    }
+
+    .footer {
+        grid-template-columns: 4% 41% 10% 41% 4%;
+        grid-row: 1fr;
+        grid-template-rows: 2fr;    
+    }
+
+    .footer .footer__block:first-of-type {
+        grid-column: 2 / 3;
+    }
+
+    .footer .footer__block:nth-of-type(3) {
+        grid-column: 1 / 5;
+        grid-row: 2 / 2;
+        margin: 0 auto;
+        margin-top: 8vw;
+        width: 30%;
+    }
+
+    .footer__info {
+        height: 4vw;
+    }
+
+}
