@@ -988,4 +988,156 @@ section{
 
 }
 
+@media(max-width: 425px) {
+    section {
+        margin-bottom: 22%;
+    }
+
+    .main__centre {
+        top: 39.5%;
+        left: 28.7%;
+    }
+
+    /* CATALOG */
+    .catalog {
+        position: relative;
+    }
+
+    .catalog > p {
+        width: 96%;
+    }
+
+    .catalog__menu {
+        height: 55vw;
+        width: 64vw;
+        margin-top: 0%;
+        top: 25%;
+        left: 15%;
+    }
+
+    .catalog__menu__links {
+        padding: 9%;
+    }
+
+    .catalog__menu__links a {
+        font-size: 7vw;
+    }
+
+    .catalog__back {
+        height: 80vw;
+        width: 92vw;
+        margin-top: 10%;
+    }
+
+    .catalog__back__wave img {
+        width: 92vw;
+    }
+
+    .link_to {
+        margin-top: 42%;
+    }
+
+    .link_to a {
+        font-size: 3.85vw;
+    }
+
+    /* WaVES */
+    .waves {
+        grid-column: 1 / 6;
+        margin-bottom: 15%;
+    }
+
+    /* NEW */
+    .new > p {
+        display: none;
+    }
+
+    .new__candies {
+        margin-top: 12vw;
+        height: 96vw;
+    }
+
+    /* ABOUT */
+    .about__text,
+    .events__text {
+        width: 100%;
+    }
+
+    .about, .events {
+        margin-top: 14%;
+        margin-bottom: 30%;
+    }
+
+    .about__text h2,
+    .events__text h2 {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+        margin-bottom: 11vw;
+    }
+
+    .about__pic img {
+        margin-left: 2vw;
+        width: 77vw;
+    }
+
+    .about__pic__rect {
+        margin: 0 auto;
+        margin-right: -12vw;
+        width: 80vw;
+        height: 68vw;
+    }
+
+    .about .link_to {
+        margin-top: 22%;
+    }
+
+    /* FEATURES */
+    .features p {
+        font-size: 100px;
+    }
+
+    /* EVENTS */
+   .talk,
+   .exib,
+   .lect {
+       display: none;
+    }
+
+    .events__pic__photo {
+        width: 47vw;
+        height: 65vw;
+        transform: translate(22vw, -25vw);
+    }
+
+    /* REVIEWS */
+    .reviews__block img {
+        width: 77vw;
+    }
+
+    .reviews__block p {
+        width: 73%;
+        padding: 3vw 9vw;
+    }
+
+    /* CONTACTS */
+    .contacts__wrapper {
+        margin-bottom: 16%;
+    }
+    
+    .contacts__text__btn {
+        margin-top: 8vw;
+    }
+
+    .contacts__time {
+        height: 69vw;
+    }
+
+    .contacts__time div {
+        margin-left: 7vw;
+        margin-top: 7vw;
+    }
+    
+}
+
 
