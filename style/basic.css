@@ -48,7 +48,7 @@ p {
 
 .header__menu,
 .header__menu__links {
-    visibility: hidden;
+    display: none;
 }
 
 header {
@@ -221,7 +221,7 @@ footer {
     }
 
     .header__menu {
-        visibility: visible;
+       display: block;
         margin: 0 auto;
         margin-right: 2vw;
     }

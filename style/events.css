@@ -1,0 +1,129 @@
+/* styles for main page */
+
+
+/* add basic styles which are used in all pages */
+@import "basic.css";
+
+h1 {
+    text-transform: uppercase;
+    font-size: 6.8vw;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 38%;
+}
+
+.header__link:nth-of-type(3) {
+    color: var(--pink);
+}
+
+
+/* MAIN SCREEN WITH TITLE */
+
+.wrapper__hero {
+    grid-column: 2 / 5;
+    width: 100%;
+    display: flex;
+}
+
+.wrapper__hero__left,
+.wrapper__hero__right {
+    width: 50%;
+    height: 43vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper__hero__left {
+    background-image: url(../img/events-bc-left.svg);
+}
+
+.wrapper__hero__left h1 {
+    color: var(--blue);
+}
+
+.wrapper__hero__right {
+    background-image: url(../img/events-bc-right.svg);
+}
+
+.wrapper__hero__right h1 {
+    color: var(--pink);
+}
+
+/* CONTENT LINES */
+.content {
+    margin-top: 13vw;
+}
+
+.content__line {
+    display: flex;
+    animation: toRight 20s linear infinite;
+}
+
+.content__line:hover {
+    animation-play-state: paused;
+}
+
+.content__line:nth-of-type(odd) .content__line__block:nth-of-type(even) .content__line__block__pic {
+    background-color: var(--blue);
+}
+
+.content__line__block__pic {
+    background-color: var(--grey);
+    width: 30vw;
+    height: 26vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.open .content__line__block__pic:hover {
+    background-image: url(../img/afisha-1.png);
+}
+
+.talk .content__line__block__pic:hover {
+    background-image: url(../img/afisha-2.png);
+}
+
+.lecture .content__line__block__pic:hover {
+    background-image: url(../img/afisha-3.png);
+}
+
+@keyframes toRight {
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(50%);
+    }
+    100% {
+        transform: translate(100%);
+    }
+}
+
+.block-one,
+.block-two {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw;
+    color: white;
+}
+
+.block-two div:nth-of-type(2) {
+    cursor: pointer;
+}
+
+.block-two div:nth-of-type(2):hover {
+   text-decoration: underline;
+}
+
+.content__line__block__text {
+    margin-top: 4vw;
+}
+
+.content__line__block__text p {
+    margin-top: 1vw;
+}

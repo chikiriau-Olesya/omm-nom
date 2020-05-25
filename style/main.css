@@ -1068,6 +1068,33 @@ section{
         margin-bottom: 30%;
     }
 
+    .about .link_to a::after,
+    .events .link_to a::after{
+        content: '';
+        position: absolute;
+        margin-left: 5px;
+        margin-top: 2px;
+        width: 20px;
+        height: 14px;
+      
+        background-image: url(../img/arrow-white.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+        transition: all 0.2s;
+    }
+    
+    .about .link_to:hover a
+    .events .link_to:hover a{
+        color: var(--blue);
+    }
+    
+    .about .link_to:hover a::after,
+    .events .link_to:hover a::after{
+        background-image: url(../img/links-arrow.svg);
+    }
+    
+
     .about__text h2,
     .events__text h2 {
         margin: 0 auto;
@@ -1124,7 +1151,7 @@ section{
     .contacts__wrapper {
         margin-bottom: 16%;
     }
-    
+
     .contacts__text__btn {
         margin-top: 8vw;
     }
