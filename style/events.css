@@ -68,7 +68,8 @@ h1 {
 
 .content__line {
     display: flex;
-    animation: toRight 20s linear infinite;
+    animation: toRight 50s linear infinite;
+    animation-direction: alternate;
 }
 
 .content__line:hover {
@@ -77,13 +78,13 @@ h1 {
 
 @keyframes toRight {
     0% {
-        transform: translate(0);
+        transform: translate(-120%);
     }
     50% {
-        transform: translate(50%);
+        transform: translate(0%);
     }
     100% {
-        transform: translate(100%);
+        transform: translate(-120%);
     }
 }
 
@@ -302,6 +303,28 @@ button:hover {
     }
 
     /* CONTENT LINE STYLES */
+
+    .content__line {
+        display: flex;
+        animation: toRightPhone 50s linear infinite;
+        animation-direction: alternate;
+    }
+    
+    .content__line:hover {
+        animation-play-state: paused;
+    }
+    
+    @keyframes toRightPhone{
+        0% {
+            transform: translate(-220%);
+        }
+        50% {
+            transform: translate(10%);
+        }
+        100% {
+            transform: translate(-220%);
+        }
+    }
 
     .content__line__block {
         margin-right: 15vw;
