@@ -54,6 +54,10 @@ h1 {
     color: var(--pink);
 }
 
+.wrapper__hero__tittle__phone {
+    display: none;
+}
+
 
 
 /* CONTENT LINES */
@@ -242,5 +246,122 @@ button:hover {
     .wrapper__hero {
         margin-top: 9%;
         grid-column: 2 / 6;
+    }
+
+    .form {
+       height: 59vw;
+    }
+
+    .form__text {
+        padding-top: 17%;
+    }
+
+    .form__inner {
+        margin-top: 5vw;
+        width: 80%;
+    }
+
+    .form__inner__block:nth-of-type(2) {
+        width: 18vw
+    }
+    
+    .form__inner__block:nth-of-type(2) {
+        width: 24vw;
+    }
+}
+
+@media (max-width: 425px) {
+
+    p {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h1 {
+        margin-top: 34%;
+    }
+
+    /* FIRST SCREEN */
+    .wrapper__hero__right,
+    .wrapper__hero__title {
+        display: none;
+    }
+
+    .wrapper__hero__tittle__phone {
+        display: flex;
+        flex-direction: column;
+        font-size: 13vw;
+    }
+
+    .wrapper__hero__left {
+        width: 100%;
+        height: 91vw;
+    }
+
+    /* CONTENT LINE STYLES */
+
+    .content__line__block {
+        margin-right: 15vw;
+        width: 50vw;
+    }
+
+    .content__line__block__pic {
+        width: 50vw;
+        height: 45vw;
+    }
+
+    .block-one, 
+    .block-two {
+        padding: 2vw;
+        font-size: 14px;
+    }    
+
+    /* FORM STYLES */
+
+    .form {
+        margin-bottom: 102%;
+        height: 70vw;
+    }
+
+    .form__text {
+        width: 88%;
+    }
+
+    .form__text h2 {
+        font-size: 5.8vw;
+    }
+
+    .form__inner {
+        margin-top: 36vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form__inner__block {
+        margin-bottom: 7vw;
+        margin-right: 0;
+    }
+
+    .form__inner__block:nth-of-type(2) {
+        width: 55vw;
+    }
+
+    label {
+       color: var(--blue);
+       font-size: 18px;
+       font-weight: 600;
+    }
+
+    input {
+        margin-top: 3vw;
+    }
+
+    button {
+        background-color: var(--blue);
+        color: white;
+        border: 5px solid var(--blue);
     }
 }
