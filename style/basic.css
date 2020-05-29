@@ -17,6 +17,7 @@ body {
     position: relative;
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
+    transition: all 0.2s linear;
 }
 
 a {
