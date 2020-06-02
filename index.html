@@ -80,7 +80,7 @@
             <div class="catalog__menu">
                 <div class="catalog__menu__links">
                     <div class="catalog__menu__links__block catalog__menu__links__block-candy">
-                        <a href="./pages/catalog.html">Конфеты</a>
+                        <a href="./pages/catalog.html#candy">Конфеты</a>
                         <div class="catalog__menu__links__block-hover">
                             <img src="./img/main-Catolog-Candy1.png" alt="">
                             <img src="./img/main-Catolog-Candy2.png" alt="">
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="catalog__menu__links__block catalog__menu__links__block-choc">
-                        <a href="./pages/catalog.html">Шоколад</a>
+                        <a href="./pages/catalog.html#chocolate">Шоколад</a>
                         <div class="catalog__menu__links__block-hover catalog__menu__links__block-hover-choc">
                             <img src="./img/main-Catolog-Choc1.png" alt="">
                             <img src="./img/main-Catolog-Choc2.png" alt="">
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div class="catalog__menu__links__block catalog__menu__links__block-bars">
-                        <a href="./pages/catalog.html">Батончики</a>
+                        <a href="./pages/catalog.html#bars">Батончики</a>
                         <div class="catalog__menu__links__block-hover catalog__menu__links__block-hover-bars">
                             <img src="./img/main-Catolog-Bar1.png" alt="">
                             <img src="./img/main-Catolog-Bar2.png" alt="">
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="catalog__menu__links__block catalog__menu__links__block-mar">
-                        <a href="./pages/catalog.html">Мармелад</a>
+                        <a href="./pages/catalog.html#mar">Мармелад</a>
                         <div class="catalog__menu__links__block-hover catalog__menu__links__block-hover-mar">
                             <img src="./img/main-Catolog-Mar1.png" alt="">
                             <img src="./img/main-Catolog-Mar2.png" alt="">
@@ -200,11 +200,11 @@
         </div>
 
         <!-- features -->
-        <section class="features">
-            <p>Мы отличаемся</p>
-            <p>неповторимостью</p>
-            <p>уникальными вкусами</p>
-            <p>полезным составом</p>
+        <section class="features" id="sectionFeatures">
+            <p class="feature__one">Мы отличаемся</p>
+            <p class="feature__two">неповторимостью</p>
+            <p class="feature__three">уникальными&nbsp;вкусами</p>
+            <p class="feature__four">полезным&nbsp;составом</p>
         </section>
 
         <!-- events -->
@@ -262,16 +262,22 @@
             </section>
         </div>
 
+    </div>
+
         <!-- second web-poster -->
         <div class="web-poster">
-            <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор идей</a>
-            <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор идей</a>
-            <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор идей</a>
-            <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор идей</a>
-            <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор идей</a>
-            <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор идей</a>
-            <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор идей</a>
+            <div class="web-poster__block">
+                <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор&nbsp;идей</a>
+                <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор&nbsp;идей</a>
+                <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор&nbsp;идей</a>
+                <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор&nbsp;идей</a>
+                <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор&nbsp;идей</a>
+                <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор&nbsp;идей</a>
+                <a href="https://chikiriau-olesya.github.io/OmmNom/">Генератор&nbsp;идей</a>
+            </div>
         </div>
+
+     <div class="wrapper">
 
         <!-- contacts -->
         <div class="contacts__wrapper">
@@ -281,8 +287,8 @@
                     <p>Наш магазин активно работает на&nbsp;протяжении всей рабочей недели и&nbsp;выходные</p>
     
                     <div class="contacts__text__btn">
-                        <div>пн-пт</div>
-                        <div>сб</div>
+                        <div class="week">пн-пт</div>
+                        <div class="weekends">сб</div>
                     </div>
                 </div>
                 <div class="contacts__time">
@@ -343,6 +349,9 @@
 
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js" charset="utf-8"></script>
+    <script src="./js/anime.min.js"></script>
     <script src="./js/basic.js"></script>
     <script src="./js/index.js"></script>
 </body>

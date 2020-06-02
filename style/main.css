@@ -15,7 +15,6 @@ section{
 }
 
 
-
 /* MAIN SECTION STYLES */
 
 .main { 
@@ -399,6 +398,21 @@ section{
     text-align: start;
 }
 
+.about .link_to a::after,
+.events .link_to a::after {
+    background-image: url(../img/arrow-white.svg);
+}
+
+.about .link_to:hover a::after,
+.events .link_to:hover a::after {
+    background-image: url(../img/links-arrow.svg);
+}
+
+.about .link_to:hover a,
+.events .link_to:hover a {
+    color: var(--blue);
+}
+
 
 
 /* FEATURES SECTION STYLES */
@@ -407,7 +421,9 @@ section{
     grid-column: 1 / 6;
     color: var(--pink);
     font-weight: 600;
-    overflow-x: hidden;
+    overflow: hidden;
+    margin-top: 6%;
+    margin-bottom: 20%;
 }
 
 .features p {
@@ -575,15 +591,40 @@ section{
 /* WEB-POSTER */
 .web-poster {
     overflow: hidden;
-    grid-column: 1 / 6;
     background-color: var(--pink);
     font-size: 28px;
 }
 
-.web-poster a {
+.web-poster__block {
+    display: flex;
+    animation: posterAnime 10s linear infinite;
+    animation-direction: alternate;
+}
+
+.web-poster__block:hover {
+    animation-play-state: paused;
+}
+
+@keyframes posterAnime {
+    0% {
+        transform: translate(-10%);
+    }
+    50% {
+        transform: translate(0%);
+    }
+    100% {
+        transform: translate(-10%);
+    }
+}
+
+.web-poster__block a {
     font-size: 28px;
     color: white;
     padding: 1vw;
+}
+
+.web-poster__block:hover a {
+    color: var(--blue);
 }
 
 
