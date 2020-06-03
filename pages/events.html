@@ -10,6 +10,38 @@
 </head>
 <body>
 
+    <div class="window">
+        <div class="window__bc"></div>
+        <div class="window__item" id="openShopWindow">
+            <div class="window__item__close">
+                <svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.09375 1.47323L28.8222 26.9759M2.09375 26.9759L28.8222 1.47217" stroke="var(--blue)" stroke-width="4" stroke-linejoin="bevel"/>
+                </svg>
+            </div>
+            <h2 class="window__item__title">паблик ток</h2>
+            <div class="window__item__text">
+                <p>В стенах магазина прошла новая лекция, посвященная теме изготовления конфетных идей. Приглашенные гости рассказали, как они справляются с творческим кризисом и выгоранием, по-</p>
+                <p>делились советами, как выбрать правильную конфету для представленной задачи и обсудили последние новости в мире конфет</p>
+            </div>
+            <div class="window__item__pic">
+            </div>
+        </div>
+        <div class="window__item" id="talkWindow">
+            <div class="window__item__close">
+                <svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.09375 1.47323L28.8222 26.9759M2.09375 26.9759L28.8222 1.47217" stroke="var(--blue)" stroke-width="4" stroke-linejoin="bevel"/>
+                </svg>
+            </div>
+            <h2 class="window__item__title">паблик</h2>
+            <div class="window__item__text">
+                <p>В стенах магазина прошла новая лекция, посвященная теме изготовления конфетных идей. Приглашенные гости рассказали, как они справляются с творческим кризисом и выгоранием, по-</p>
+                <p>делились советами, как выбрать правильную конфету для представленной задачи и обсудили последние новости в мире конфет</p>
+            </div>
+            <div class="window__item__pic">
+            </div>
+        </div>
+    </div>
+
     <div class="wrapper">
          <!-- header -->
          <header class="header">
@@ -92,7 +124,7 @@
                     </div>
                     <div class="block-two">
                         <div class="event">вечеринка</div>
-                        <div class="event-btn">ПОДРОБНЕЕ</div>
+                        <div class="event-btn" id="openShop">ПОДРОБНЕЕ</div>
                     </div>
                 </div>
                 <div class="content__line__block__text">
@@ -125,7 +157,7 @@
                     </div>
                     <div class="block-two">
                         <div class="event">лекция</div>
-                        <div class="event-btn">ПОДРОБНЕЕ</div>
+                        <div class="event-btn" id="talk">ПОДРОБНЕЕ</div>
                     </div>
                 </div>
                 <div class="content__line__block__text">
@@ -249,6 +281,7 @@
         </footer>
     </div>
 
-    
+    <script src="../js/basic.js"></script>
+    <script src="../js/events.js"></script>
 </body>
 </html>

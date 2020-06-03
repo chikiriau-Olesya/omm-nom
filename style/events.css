@@ -20,6 +20,66 @@ h1 {
     color: var(--pink);
 }
 
+/* MODAL WINDOWS FOR EVENTS */
+
+.window {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 110vh;
+    z-index: 999;
+    display: none;
+}
+
+.window__bc {
+    background-color: var(--blue);
+    opacity: 0.5;
+    width: 100%;
+    height: 110vh;
+    position: relative;
+}
+
+.window__item {
+    position: absolute;
+    top: 12%;
+    left: 14%;
+    width: 65vw;
+    height: 36vw;
+    padding: 3vw;
+    background-color: white;
+    display: none;
+}
+
+.window__item-active {
+    display: block;
+}
+
+.window__item__close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.window__item__title {
+    margin-bottom: 2vw;
+}
+
+.window__item__text {
+    display: flex;
+    margin-bottom: 3vw;
+    margin-right: 3vw;
+    font-size: 2.3vw;
+}
+
+.window__item__pic {
+    height: 18vw;
+    width: 40vw;
+    margin: 0 auto;
+    background-image: url(../img/afisha-7.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 /* MAIN SCREEN WITH TITLE */
 
@@ -244,6 +304,23 @@ button:hover {
         font-size: 2.5vw;
     }
 
+    /* WINDOW  */
+    .window__item {
+        top: 12%;
+        left: 10%;
+        width: 75vw;
+        height: 66vw;
+    }
+
+    .window__item__pic {
+        height: 33vw;
+        width: 56vw;
+    }
+
+    .window__item__text {
+        margin-bottom: 6vw;
+    }
+
     .wrapper__hero {
         margin-top: 9%;
         grid-column: 2 / 6;
@@ -283,6 +360,33 @@ button:hover {
 
     h1 {
         margin-top: 34%;
+    }
+
+    /* WINDOW */
+    .window__item {
+        top: 12%;
+        left: 7%;
+        width: 80vw;
+        height: 140vw;
+    }
+
+    .window__item__title {
+        margin-bottom: 9vw;
+    }
+
+    .window__item__text {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .window__item__text p {
+        margin-bottom: 4vw;
+        font-size: 3.5vw;
+    }
+
+    .window__item__pic {
+        height: 76vw;
+        width: 76vw;
     }
 
     /* FIRST SCREEN */
