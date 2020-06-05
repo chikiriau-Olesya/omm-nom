@@ -122,7 +122,6 @@ header {
     margin-bottom: 1vw;
 }
 
-
 .photo__desc-up {
     display: flex;
     flex-direction: column;
@@ -143,6 +142,33 @@ header {
     color: black;
     font-weight: 400;
 
+}
+
+/* STYLES FOR PAGE WITH BUILDING */
+.photo__main-building .rect {
+    background-color: var(--blue);
+    width: 35vw;
+    height: 35vw;
+    transform: translate(2vw);
+}
+
+.photo__main-building .circle-pink {
+    top: 5vw;
+    left: 23%;
+}
+
+.photo__main-building .wiggle {
+    position: absolute;
+    top: -2vw;
+    right: 2vw;
+}
+
+.photo__main-building .build-photo {
+    position: absolute;
+    bottom: 7vw;
+    right: 5vw;
+    z-index: 2;
+    width: 30vw;
 }
 
 
@@ -257,6 +283,35 @@ header {
         padding-top: 6vw;
         padding-left: 3vw;
     }
+
+
+    /* STYLES FOR BUILDING PAGE */
+
+    .photo__main-building {
+        margin-bottom: 32%;
+    }
+
+    .photo__main-building .rect {
+        width: 55vw;
+        height: 49vw;
+        transform: translate(4vw, 4vw);
+    }
+
+    .photo__main-building .circle-pink {
+        top: 10vw;
+    }
+
+    .photo__main-building .wiggle {
+        top: 2vw;
+        right: 12vw;
+        width: 14vw;
+    }
+
+    .photo__main-building .build-photo {
+        bottom: 4vw;
+        right: 14vw;
+        width: 49vw;
+    }
 }
 
 @media (max-width: 425px) {
@@ -364,6 +419,24 @@ header {
   .photo__desc img,
   .photo__desc-up img {
     width: 3.2vw;
+  }
+
+  /* STYLES FOR BUILDING PAGE */
+  .photo__main-building .rect {
+    width: 78vw;
+    height: 72vw;
+  }
+
+  .photo__main-building .wiggle {
+    top: -2vw;
+    right: 18vw;
+    width: 21vw;
+  }
+
+  .photo__main-building .build-photo {
+    bottom: 4vw;
+    right: 24vw;
+    width: 69vw;
   }
 
 
