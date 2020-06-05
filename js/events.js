@@ -31,15 +31,34 @@ function windowShow(element) {
     element.classList.add('window__item-active')
 }
 
-let openShop = document.getElementById('openShop')
+// let openShop = document.getElementById('openShop')
+// let openShopWindow = document.getElementById('openShopWindow')
+// openShop.onclick = function() {
+//     windowShow(openShopWindow)
+// }
+
+let openShop = document.querySelectorAll('.openShop-btn')
 let openShopWindow = document.getElementById('openShopWindow')
-openShop.onclick = function() {
-    windowShow(openShopWindow)
+for(let i = 0; i < openShop.length; i++) {
+    openShop[i].onclick = function() {
+        windowShow(openShopWindow)
+    }
 }
 
-let talk = document.getElementById('talk')
+// let talk = document.getElementById('talk')
+// let talkWindow = document.getElementById('talkWindow')
+// talk.onclick = function() {
+//     windowShow(talkWindow)
+// }
+
+let talk = document.querySelectorAll('.talk-btn')
 let talkWindow = document.getElementById('talkWindow')
-talk.onclick = function() {
-    windowShow(talkWindow)
+for(let i = 0; i < talk.length; i++) {
+    talk[i].onclick = function() {
+        windowShow(talkWindow)
+    }
 }
+
+
+
 
