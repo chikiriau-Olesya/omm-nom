@@ -59,6 +59,10 @@ h1 {
     justify-content: flex-end;
 }
 
+.window__item__close svg {
+    cursor: pointer;
+}
+
 .window__item__title {
     margin-bottom: 2vw;
 }
@@ -91,6 +95,22 @@ h1 {
    /* lecture bc */
 #lectureWindow .window__item__pic {
     background-image: url(../img/afisha-3-window.png);
+}
+  /* new product bc */
+#newProductWindow .window__item__pic {
+    background-image: url(../img/afisha-5-window.png);
+}
+  /* candy lecture  bc */
+#candyWindow .window__item__pic {
+    background-image: url(../img/afisha-7-window.png);
+}
+  /* public talk 2 bc */
+#publicWindow .window__item__pic {
+    background-image: url(../img/afisha-8-window.png);
+}
+  /* meeting bc */
+#meetWindow .window__item__pic {
+    background-image: url(../img/afisha-9-window.png);
 }
 
 
