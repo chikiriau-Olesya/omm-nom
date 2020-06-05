@@ -80,6 +80,19 @@ h1 {
     background-repeat: no-repeat;
 }
 
+   /* open shop  bc */
+#openShopWindow .window__item__pic {
+    background-image: url(../img/afisha-1-window.png);
+}
+   /* publick talk bc */
+#talkWindow .window__item__pic {
+    background-image: url(../img/afisha-2-window.png);
+}
+   /* lecture bc */
+#lectureWindow .window__item__pic {
+    background-image: url(../img/afisha-3-window.png);
+}
+
 
 /* MAIN SCREEN WITH TITLE */
 
@@ -128,15 +141,48 @@ h1 {
 
 .content__line {
     display: flex;
-    animation: toRight 50s linear infinite;
     animation-direction: alternate;
 }
 
-.content__line:hover {
-    animation-play-state: paused;
+.content__line-wrapper {
+    background-color: var(--blue);
+    color: white;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    position: relative;
 }
 
-/* @keyframes toRight {
+.content__line-wrapper::before,
+.content__line-wrapper::after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/wave-blue.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 2.2vw;
+}
+
+.content__line-wrapper::before {
+    top: -10%;
+}
+
+.content__line-wrapper::after {
+    bottom: -10%;
+}
+
+
+.content__line:first-of-type{
+    animation: toRight 50s linear infinite;
+}
+
+.content__line:nth-of-type(3) {
+    animation: toRight 50s linear infinite;
+    animation-delay: 4s;
+}
+
+@keyframes toRight {
     0% {
         transform: translate(-120%);
     }
@@ -146,15 +192,56 @@ h1 {
     100% {
         transform: translate(-120%);
     }
-} */
+}
 
+#content__line-special {
+    animation: toLeft 50s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes toLeft {
+    0% {
+        transform: translate(0%);
+    }
+    50% {
+        transform: translate(-120%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+.content__line:first-of-type:hover
+#content__line-special:hover,
+.content__line:nth-of-type(3):hover {
+    animation-play-state: paused;
+}
+
+.content__line:hover,
+#content__line-special:hover {
+    animation-play-state: paused;
+}
+
+
+
+   /* add bc color to special event card in 1 and 3 line */
 .content__line:nth-of-type(odd) .content__line__block:nth-of-type(even) .content__line__block__pic {
     background-color: var(--blue);
 }
 
+/* add bc color to special event card in 2 line */
+#content__line-special .content__line__block:nth-of-type(even) .content__line__block__pic {
+    background-color: var(--pink);
+}
+
+
 .content__line__block {
     margin-right: 8vw;
     width: 35vw;
+}
+
+#content__line-special .content__line__block {
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
 .content__line__block__pic {
@@ -169,6 +256,8 @@ h1 {
     background-repeat: no-repeat;
 }
 
+
+   /* first line pictures hover */
 .open .content__line__block__pic:hover {
     background-image: url(../img/afisha-1.png);
 }
@@ -181,12 +270,45 @@ h1 {
     background-image: url(../img/afisha-3.png);
 }
 
+
+    /* second line pictures hover */
+.workshop .content__line__block__pic:hover {
+    background-image: url(../img/afisha-4.png);
+}
+
+.new-product .content__line__block__pic:hover {
+    background-image: url(../img/afisha-5.png);
+}
+
+.exhibition .content__line__block__pic:hover {
+    background-image: url(../img/afisha-6.png);
+}
+
+    /* third line pictures hover */
+.candy .content__line__block__pic:hover {
+    background-image: url(../img/afisha-7.png);
+}
+
+.public .content__line__block__pic:hover {
+    background-image: url(../img/afisha-8.png);
+}
+
+.meet .content__line__block__pic:hover {
+    background-image: url(../img/afisha-9.png);
+}
+
+
 .block-one,
 .block-two {
     display: flex;
     justify-content: space-between;
     padding: 1vw;
     color: white;
+}
+
+#web-poster {
+    color: white;
+    font-size: 16px;
 }
 
 .block-two div:nth-of-type(2) {
