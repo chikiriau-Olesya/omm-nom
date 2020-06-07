@@ -29,6 +29,10 @@ header {
     margin-right: 4vw;
 }
 
+.header__link:nth-of-type(2) {
+    color: var(--pink);
+}
+
 
 /* STYLES FOR ALL BLOCKS */
 .content {
@@ -171,9 +175,87 @@ header {
     width: 30vw;
 }
 
+/* STYLES FOR PAGE OF 1ST FLOOR */
+
+.firstFloor__one {
+    transform: translateX(7vw);
+    width: 19.55vw;
+    animation: showPic .15s linear;
+    animation-delay: 2s;
+}
+
+.photo__main__bc {
+    background-color: var(--blue);
+    text-align: center;
+    transform: translateY(-2vw);
+}
+
+.photo__main__bc img {
+    width: 32vw;
+    padding: 2vw;
+}
+
+.photo__main__firstFloor .circle-pink {
+    top: 6vw;
+    left: 60%;
+}
 
 
+@keyframes showPic {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* STYLES FOR PAGE 2ND FLOOR */
+
+.photo__main__secondFloor__bc {
+    background-color: var(--blue);
+    text-align: center;
+    margin-top: 4vw;
+}
+
+.photo__main__secondFloor__bc img {
+    padding: 2vw;
+}
+
+.photo__main__secondFloor .circle-pink {
+    top: -4vw;
+    left: 68%;
+}
+
+.photo__main__secondFloor .wiggle {
+    transform: translate(-4vw,-4vw) rotate(175deg);
+}
+
+
+/* STYLES FOR PAGE 3D FLOOR */
+
+.photo__main__thirdFloor .circle-pink {
+    top: 12vw;
+    left: 73%;
+}
+
+.photo__main__thirdFloor-first {
+    transform: translate(15vw);
+}
+
+.photo__main__thirdFloor__bc {
+    background-color: var(--blue);
+    text-align: center; 
+    width: 35vw;
+    transform: translateY(-5vw);
+}
+
+.photo__main__thirdFloor__bc img{
+    width: 28vw;
+    padding: 3vw;
+}
 
 /* STYLES FOR TEXT PINK BLOCK */
 
