@@ -268,6 +268,36 @@ section {
     left: 2%;
 }
 
+.circles {
+    grid-column: 1 / 6;
+    background-color: var(--grey);
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 15%;
+    height: 30vw;
+}
+
+.circles h2 {
+    text-align: center;
+    margin-top: 2vw;
+    color: #D3A221;
+    mix-blend-mode: difference;
+}
+
+.circles__content__anim {
+    display: flex;
+    mix-blend-mode: difference;
+}
+
+.circle {
+    width: 15vw;
+    height: 15vw;
+    background-color: #D3A221;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    margin-right: -10vw;
+}
+
 
 
 
@@ -525,26 +555,6 @@ section {
         height: 15vw;
         padding-top: 6vw;
     }
-
-
-    /* .new::after,
-    .new::before {
-        content: '';
-        position: absolute;
-        background-image: url(../img/wave-blue.svg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 20vw;
-    }
-
-    .new::before {
-        top: -10%;
-    }
-
-    .new::after {
-        bottom: -10%;
-    } */
 
     .new__line {
         animation: toTop 20s linear infinite;
