@@ -417,6 +417,21 @@ section {
     padding-top: 4vw;
   }
 
+  /* CIRCLES */
+  .circles {
+    margin-top: 10%;
+    height: 45vw;
+  }
+
+  .circles__content__anim {
+      margin-top: 5vw;
+  }
+
+  .circle {
+      width: 20vw;
+      height: 20vw;
+  }
+
     
 }
 
@@ -587,5 +602,20 @@ section {
     .new__line__item__pic {
         width: 24vw;
         height: 22.5vw;
+    }
+
+    /* Circles */
+
+    .circles {
+        height: 100vw;
+    }
+
+    .circles h2 {
+        margin-top: 7vw;
+    }
+
+    .circle {
+        width: 40vw;
+        height: 30vw;
     }
 }
