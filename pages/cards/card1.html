@@ -3,43 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OMM NOM cataloge</title>
-    <link rel="stylesheet" href="../style/basic.css">
-    <link rel="stylesheet" href="../style/about.css">
-    <link rel="shortcut icon" href="../img/favicon.svg" type="image/svg">
+    <title>ОММ НОМ Карточка товара</title>
+    <link rel="stylesheet" href="../../style/basic.css">
+    <link rel="stylesheet" href="../../style/card.css">
+    <link rel="shortcut icon" href="../../img/favicon.svg" type="image/svg">
 </head>
 <body>
+
     <div class="wrapper">
         <!-- header -->
         <header class="header">
-            <a href="./catalog.html" class="header__link">каталог</a>
-            <a href="./about.html" class="header__link">о нас</a>
-            <a href="./events.html" class="header__link">события</a>
-            <a href="../index.html" class="header__link">
-                <img src="../img/logo-link.svg" alt="">
+            <a href="../catalog.html" class="header__link">каталог</a>
+            <a href="../about.html" class="header__link">о нас</a>
+            <a href="../events.html" class="header__link">события</a>
+            <a href="../../index.html" class="header__link">
+                <img src="../../img/logo-link.svg" alt="">
             </a>
-            <a href="../index.html#contacts" class="header__link">контакты</a>
-
+            <a href="../../index.html#contacts" class="header__link">контакты</a>
+    
             <div class="header__menu">
-                <img src="../img/menu.svg" alt="">
+                <img src="../../img/menu.svg" alt="">
             </div>
         </header>
-
+    
         <!-- responsive  menu -->
         <div class="header__menu__links">
             <div class="header__menu__links__btns">
                 <a href="index.html" class="header__menu__link">
-                    <img src="../img/logo-white.svg" alt="">
+                    <img src="../../img/logo-white.svg" alt="">
                 </a>
                 <div class="close">
-                    <img src="../img/close.svg" alt="">
+                    <img src="../../img/close.svg" alt="">
                 </div>
             </div>
             <div class="header__menu__links__list">
                 <a href="#" class="header__menu__link">каталог</a>
-                <a href="./about.html" class="header__menu__link">о нас</a>
-                <a href="./events.html" class="header__menu__link">события</a>
-                <a href="../index.html #contacts" class="header__menu__link">контакты</a>
+                <a href="../about.html" class="header__menu__link">о нас</a>
+                <a href="../events.html" class="header__menu__link">события</a>
+                <a href="../../index.html #contacts" class="header__menu__link">контакты</a>
             </div>
             <div class="header__menu__links__socials">
                 <a href="" class="menu-fb">
@@ -62,63 +63,83 @@
             </div>
         </div>
 
-        <div class="content">
+        <div class="card">
 
-            <div class="photo">
-                <div class="photo__desc"  id="main">
-                    <span>фотогалерея</span>
-                    <img src="../img/about-arrowdown.svg" alt="">
-                </div>
-                <div class="photo__main photo__main-building">
-                    <div class="rect"></div>
-                    <div class="circle-pink"></div>
-                    <img src="../img/about-wiggle.svg" alt="" class="wiggle">
-                    <img src="../img/about2-01.png" alt="" class="build-photo">
-                </div>
+            <!-- block with product photo -->
+            <div class="card__product">
+                <div class="card__product__wrap">
 
-                <div class="photo__list">
-                    <div class="photo__list__block">
-                        <img src="../img/about2-02.png" alt="" class="photo_inner">
-                        <span>Общий вид</span>
-                        <div class="circle-blue"></div>
+                    <div class="card__product__links">
+                        <a href="../catalog.html">Каталог</a>
+                        <span>/</span>
+                        <div class="">Товар</div>
                     </div>
-                    <div class="photo__list__block">
-                        <img src="../img/about2-03.png" alt="" class="photo_inner">
-                        <span>Вид сбоку</span>
+    
+                    <div class="card__product__slider slider">
+                        <div class="card__product__slider__item item">
+                            <img src="../../img/card1-1.png" alt="">
+                        </div>
+                        <div class="card__product__slider__item item">
+                            <img src="../../img/card1-2.png" alt="">
+                        </div>
+                        <div class="card__product__slider__item item">
+                            <img src="../../img/card1-3.png" alt="">
+                        </div>
+                        <div class="card__product__slider__link prev" id="prev"> </div>
+                        <div class="card__product__slider__link next" id="next"></div>
                     </div>
-                </div>
 
-                <div class="photo__desc-up">
-                    <img src="../img/about-arrowup.svg" alt="">
-                    <a href="#main" class="up-link">наверх</a>
                 </div>
 
             </div>
 
-            <!-- text content -->
-            <div class="text">
-                <div class="text__content">
-                    <h2>Здание</h2>
-                    <p>Наш главный магазин объединяет не&nbsp;только место, где вы&nbsp;сможете купить вкуснейшие сладости, но&nbsp;и&nbsp;побывать на&nbsp;настоящей фабрике, посетить мастер-классы и&nbsp;отдохнуть в&nbsp;зоне фудкорта и&nbsp;кафетерия</p>
-                    <p>Магазин неслучайно имеет именно такую форму. В&nbsp;ней отразилась метафора бренда&nbsp;&mdash; конфета содержит в&nbsp;себе яркий всплеск идей</p>
+            <!-- block with content -->
+            <div class="card__content">
+
+                <!-- product description -->
+                <div class="card__content__top">
+                    <div class="card__content__top-wrap">
+                        <div class="card__content__top-title">
+                            <h2>Конфеты шоколадные</h2>
+                            <p>идея: мысли о чем поговорить</p>
+                        </div>
+                        <div class="card__content__top-des">
+                            <p>Легкий и воздушный молочный шоколад,сочетающийся со сливками и печеньем, содержат разнообразные идеи для тем разговоров в кругу семьи или друзей</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- product price -->
+                <div class="card__content__bottom">
+                    <div class="card__content__bottom-wrap">
+                        <div class="price">
+                            <span>цена:</span>
+                            <span>100р</span>
+                        </div>
+
+                        <button class="button" id="">Купить</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- side menu -->
-            <div class="menu">
-                <div class="menu__content">
-                    <a href="./about.html" class="menu__content__mainlink">О нас</a>
-                    <a href="#" class="menu__content__mainlink" style="color: var(--grey);">здание</a>
-                    <a href="./aboutFirtsFloor.html" class="menu__content__link">1 этаж</a>
-                    <a href="./aboutSecondFloor.html" class="menu__content__link">2 этаж</a>
-                    <a href="./aboutThirdFloor.html" class="menu__content__link">3 этаж</a>
+
+             <!-- product price for adaptive versiaon-->
+             <div class="card__price__adap">
+                <div class="card__content__bottom-wrap">
+                    <div class="price">
+                        <span>цена:</span>
+                        <span>100р</span>
+                    </div>
+
+                    <button class="button" id="">Купить</button>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <script src="../js/basic.js"></script>
+    <script src="../../js/card.js"></script>
+    <script src="../../js/basic.js"></script>
+    
 </body>
-
 </html>

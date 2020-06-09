@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+.wrapper > div {
+    transition: all 1.5s ease;
+}
+
 span {
     font-size: 1.2vw;
 }
@@ -180,8 +184,8 @@ header {
 .firstFloor__one {
     transform: translateX(7vw);
     width: 19.55vw;
-    animation: showPic .15s linear;
-    animation-delay: 2s;
+    /* animation: showPic .15s linear;
+    animation-delay: 2s; */
 }
 
 .photo__main__bc {
@@ -200,7 +204,7 @@ header {
     left: 60%;
 }
 
-
+/* 
 @keyframes showPic {
     0% {
         opacity: 0;
@@ -209,7 +213,7 @@ header {
     100% {
         opacity: 1;
     }
-}
+} */
 
 
 /* STYLES FOR PAGE 2ND FLOOR */
