@@ -48,6 +48,7 @@ h1 {
     padding: 3vw;
     background-color: white;
     display: none;
+    border-radius: 2px;
 }
 
 .window__item-active {
@@ -257,6 +258,7 @@ h1 {
 .content__line__block {
     margin-right: 8vw;
     width: 35vw;
+    border-radius: 2px;
 }
 
 #content__line-special .content__line__block {
@@ -274,6 +276,7 @@ h1 {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 2px;
 }
 
 
