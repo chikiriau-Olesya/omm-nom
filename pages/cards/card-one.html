@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ОММ НОМ Карточка товара</title>
     <link rel="stylesheet" href="../../style/basic.css">
-    <link rel="stylesheet" href="../../style/card.css">
+    <link rel="stylesheet" href="../../style/card-product.css">
     <link rel="shortcut icon" href="../../img/favicon.svg" type="image/svg">
 </head>
 <body>
@@ -66,7 +66,7 @@
         <div class="card">
 
             <!-- block with product photo -->
-            <div class="card__product ignoreMe">
+            <div class="card__product">
                 <div class="card__product__wrap ignoreMe">
 
                     <div class="card__product__links">
@@ -93,56 +93,47 @@
 
             </div>
 
-            <!-- block with content -->
-            <div class="card__content">
-
-                <!-- product description -->
-                <div class="card__content__top ">
-                    <div class="card__content__top-wrap">
-                        <div class="card__content__top-title">
-                            <h2>Конфеты шоколадные</h2>
-                            <p>идея: мысли о чем поговорить</p>
-                        </div>
-                        <div class="card__content__top-des">
-                            <p>Легкий и воздушный молочный шоколад,сочетающийся со сливками и печеньем, содержат разнообразные идеи для тем разговоров в кругу семьи или друзей</p>
-                        </div>
+            <!-- product description -->
+            <div class="card__content__top ">
+                <div class="card__content__top-wrap">
+                    <div class="card__content__top-title">
+                        <h2>Конфеты шоколадные</h2>
+                        <p>идея: мысли о чем поговорить</p>
                     </div>
-                </div>
-
-                <!-- product price -->
-                <div class="card__content__bottom ">
-                    <div class="card__content__bottom-wrap">
-                        <div class="price">
-                            <span>цена:</span>
-                            <span>100р</span>
-                        </div>
-
-                        <button class="button jGravity" id="">Купить</button>
+                    <div class="card__content__top-des">
+                        <p>Легкий и воздушный молочный шоколад,сочетающийся со сливками и печеньем, содержат разнообразные идеи для тем разговоров в кругу семьи или друзей</p>
                     </div>
                 </div>
             </div>
 
-
-             <!-- product price for adaptive versiaon-->
-             <div class="card__price__adap">
+            <!-- product price -->
+            <div class="card__content__bottom ">
                 <div class="card__content__bottom-wrap">
                     <div class="price">
                         <span>цена:</span>
                         <span>100р</span>
                     </div>
 
-                    <button class="button" id="">Купить</button>
+                    <!-- <button class="button jGravity" id="">Купить</button> -->
+                    <div class="button jGravity" id="">Купить</div>
                 </div>
             </div>
+
+            <div class="popup">
+                <!-- <img src="../../img/close.svg" class="close-popup" alt=""> -->
+                <h2>Куплено</h2>
+                <p>через минуту идея придет  в голову</p>
+            </div>
+            
         </div>
 
     </div>
 
-    <!-- <script src="../../js/card.js"></script> -->
     <script src="../../js/basic.js"></script>
+    <script src="../../js/anime.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script type="text/javascript" src="../../js/jGravity.js"> </script>
+    <script type="text/javascript" src="../../js/gravity-anim.js"> </script>
     <script src="../../js/card.js"></script>
     
 </body>

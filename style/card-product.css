@@ -7,21 +7,23 @@ body {
 
 .card {
     grid-column: 1 / 6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
     width: 100%;
-    display: flex;
     position: relative;
 }
 
+/* Section with photos */
 .card__product {
-    width: 50%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
     background-color: var(--blue);
 }
 
 .card__product__wrap {
     padding-top: 3vw;
-
-    overflow-y: hidden;
-    height: 110vh;
+    height: 87vh;
 }
 
 .card__product__links {
@@ -43,21 +45,38 @@ body {
     font-weight: 500;
 }
 
-
 /* SLIDER */
-
 .card__product__slider {
     position: relative;
     margin: auto;
-    height: 36vw;
     overflow: hidden;
     margin-top: 8%;
     padding-left: 6vw;
     padding-right: 6vw;
 }
 
+.slider .item {
+    animation: fade .55s ease;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+  
+    45% {
+        opacity: .5;
+        transform: scale(.95);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .item {
-    height: 36vw;
     padding-left: 4vw;
     padding-right: 4vw;
 }
@@ -65,7 +84,7 @@ body {
 .slider .item img {
     object-fit: cover;
     width: 100%;
-    height: 36vw;
+    border-radius: 5px;
 }
 
 .card__product__slider__link {
@@ -75,7 +94,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     top: 0;
-    top: 16vw;
+    top: 14vw;
     width: 20px;
     height: 36px;
     z-index: 3;
@@ -92,21 +111,25 @@ body {
     background-image: url(../img/arrow-next.svg);
 }
 
-/* PRODUCT DESCRIPTION */
-.card__content {
-    width: 50%;
+.prev:hover,
+.next:hover {
+    transition: transform .2s ease-in-out;
+    transform: scale(1.2);
 }
 
+
+
+/* section with description */
 .card__content__top {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
     background-color: var(--grey);
-    height: 50%;
     color: var(--blue);
 }
 
 .card__content__top-wrap {
     padding: 5vw;
     padding-left: 8vw;
-   
 }
 
 .card__content__top-title {
@@ -119,6 +142,13 @@ body {
 
 .card__content__top-title > p{
     text-transform: uppercase;
+}
+
+
+/* section with price */
+.card__content__bottom {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
 }
 
 .card__content__bottom-wrap {
@@ -145,7 +175,7 @@ body {
 
 .button {
     background-color: var(--pink);
-    border: none;
+    border-radius: 2px;
     color: white;
     padding: 1.5vw 5vw;
     font-size: 24px;
@@ -160,32 +190,96 @@ body {
     display: none;
 }
 
+/* for new generate elements */
+.div__circle {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    z-index: 2;
+    top: -20vw;
+    transform: all .33s ease;
+    cursor: grab;
+}
+
+/* pop up window */
+
+.popup {
+    position: fixed;
+    z-index: 9999 !important;
+    top: 40%;
+    left: 30%;
+
+    background-color: var(--pink);
+    border-radius: 5px;
+    width: 38vw;
+    height: 21vw;
+    color: white;
+    text-align: center;
+
+    opacity: 1;
+    transform: scale(1);
+    animation: showPopup 2s ease-in-out;
+    transition: transform .3s,opacity .2s,-webkit-transform .3s;
+
+    visibility: hidden;
+}
+
+@keyframes showPopup {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(.5);
+    }
+    45% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+    80% {
+        transform: scale(.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.popup h2 {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 2vw;
+    margin-top: 3vw;
+}
+.popup p {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
 
 
 
 @media (max-width: 768px) {
 
-    .card__price__adap {
-        display: block;
+    body {
+        overflow: auto;
+        overflow-x: hidden;
     }
 
-    .card__product__links,
-    .card__content__bottom {
+    .card__product__links {
         display: none;
     }
 
     .card {
-        flex-direction: column-reverse;
         margin-top: 10%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 3.35fr 0.5fr;
     }
 
-    .card__content {
-        width: 100%;
-    }
 
+    /* section with product desc */
     .card__content__top {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
         width: 100%;
-        height: auto;
     }
 
     .card__content__top-wrap {
@@ -211,30 +305,30 @@ body {
         width: 50%
     }
 
+    /* section with pictures */
     .card__product {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
         width: 100%;
         margin-top: 0%;
     }
 
     .card__product__wrap {
-        height: 100vw;
+        height: auto;
     }
 
     .card__product__slider {
-        height: 55vw;
-        width: 56vw;
+        width: 65vw;
         text-align: center;
     }
 
     .item {
-        height: 55vw;
         width: auto;
     }
 
     .slider .item img {
         object-fit: cover;
         width: 100%;
-        height: 55vw;
     }
 
     .card__content__bottom {
@@ -255,27 +349,31 @@ body {
         right: 1vw;
     }
 
-    .card__price__adap {
-        width: 100%;
-        background-color: white;
-        bottom: 2vw;
-        padding-bottom: 11vw;
-        position: absolute;
+    /* section with price */
+    .card__content__bottom {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
     }
+
+
+    /* for new generate elements */
+    .div__circle {
+        width: 10vw;
+        height: 10vw;
+        top: 10vw;
+    }
+
 }
 
 @media (max-width: 425px) {
 
-    body {
-        overflow: auto;
-    }
-
-    .card__content__top {
-        height: 35%;
+    .card {
+        grid-template-rows: 0.5fr 2.5fr 0.5fr;
     }
 
     .card__content__top-wrap {
         flex-direction: column;
+        padding: 7vw;
     }   
     
     .card__content__top-title,
@@ -292,28 +390,8 @@ body {
         margin-bottom: 2.4vw;
     }
 
-    .card__product__wrap {
-        height: 130vw;
-    }
-
     .card__product__slider {
-        height: 76vw;
-        width: 70vw;
-    } 
-    
-    .item {
-        height: 76vw;
-    }
-
-    .slider .item img {
-        height: 76vw;
-    }
-
-    .card__product__slider__link {
-        top: 33vw;
-    }
-
-    .card__price__adap {
-        bottom: -30px;
+        width: 80vw;
+        margin-top: 13%;
     }
 }
