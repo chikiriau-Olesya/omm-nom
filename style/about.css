@@ -17,7 +17,6 @@ span {
 }
 
 /* SPECIAL STYLES FOR HEADER  */
-
 header {
     background-color: white;
     position: fixed;
@@ -308,6 +307,141 @@ header {
 
 .menu__content a:hover {
     color: var(--grey)
+}
+
+
+/* SLIDER */
+
+.photo__list__plan {
+    background-color: var(--blue);
+    width: 100%;
+    margin-bottom: 10vw;
+    margin-top: 10vw;
+    position: relative;
+}
+
+.photo__list__plan-slide  {
+    padding: 2vw;
+    color: white;
+}
+
+.slider {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 5vw;
+}
+
+.slider .item {
+    animation: fade .55s ease;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+  
+    45% {
+        opacity: .5;
+        transform: scale(.95);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.item {
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.slider__link {
+    margin-top: 2vw;
+    cursor: pointer;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 1vw;
+    width: 24px;
+    height: 10px;
+    z-index: 3;
+}
+
+.prev {
+    left: 4vw;
+    background-image: url(../img/arrow-slider-prev.svg);
+}
+
+.next {
+    right: 4vw;
+    background-image: url(../img/arrow-slider-next.svg);
+}
+
+.prev:hover,
+.next:hover {
+    transform: scale(1.2);
+    transition: transform .2s ease-in-out;
+}
+
+/* PLan descrIPTIONS */
+.item__desc {
+    transform: translate(19.5vw, 4.5vw);
+    position: relative;
+    cursor: pointer;
+    transition: all .33s ease-in-out;
+}
+
+.item__desc-dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--pink);
+    border-radius: 50%;
+}
+
+.item__desc-text {
+    position: absolute;
+    top: -4vw;
+    background-color: white;
+    border-radius: 5px;
+    color: var(--blue);
+    padding: 1vw;
+    width: 8vw;
+    visibility: hidden;
+}
+
+.item__desc:hover .item__desc-dot {
+    transform: scale(.8);
+    transition: all .33s ease-in-out;
+}
+
+.item__desc:hover .item__desc-text {
+    visibility: visible;
+    animation: showDesc .33s ease-in-out;
+}
+
+@keyframes showDesc {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    45% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
