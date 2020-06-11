@@ -202,7 +202,6 @@ body {
 }
 
 /* pop up window */
-
 .popup {
     position: fixed;
     z-index: 9999 !important;
@@ -218,7 +217,7 @@ body {
 
     opacity: 1;
     transform: scale(1);
-    animation: showPopup 2s ease-in-out;
+    animation: showPopup 2.5s ease-in-out;
     transition: transform .3s,opacity .2s,-webkit-transform .3s;
 
     visibility: hidden;
@@ -248,7 +247,7 @@ body {
     padding-left: 5vw;
     padding-right: 5vw;
     margin-bottom: 2vw;
-    margin-top: 3vw;
+    margin-top: 7vw;
 }
 .popup p {
     padding-left: 5vw;
@@ -363,6 +362,14 @@ body {
         top: 10vw;
     }
 
+    /* popup window */
+    .popup {
+        width: 50vw;
+        height: 30vw;
+        left: 25%;
+        top: 44%;
+    }
+
 }
 
 @media (max-width: 425px) {
@@ -393,5 +400,17 @@ body {
     .card__product__slider {
         width: 80vw;
         margin-top: 13%;
+    }
+
+    /* popup window  */
+    .popup {
+        width: 80vw;
+        height: 40vw;
+        left: 11%;
+        top: 43%;
+    }
+
+    .popup h2 {
+        margin-top: 13vw;
     }
 }
