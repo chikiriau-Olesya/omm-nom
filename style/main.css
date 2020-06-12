@@ -5,9 +5,7 @@
 @import "basic.css";
 
 
-body {
-    transition: all 0.2s;
-}
+
 
 section{
     grid-column: 3 / 4;
@@ -23,18 +21,46 @@ section{
 }
 
 .main__bc {
-    background-image: url(../img/main-bc.png);
+    overflow: hidden;
+    width: 100%;
+    height: 94vh;
+    padding-top: 3vw;
+}
+
+.main__bc-pic {
+    background-image: url(../img/main-bc-1.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
-    height: 94vh;
+    width: 100vw;
+    height: 100vw;
 }
 
 .main__centre {
     position: absolute;
-    top: 40.5%;
-    left: 43.7%;
+    top: 34%;
+    left: 41.8%;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.main__centre img {
+    width: 15vw;
+}
+
+.main__block {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    height: 94vh;
+    width: 100%;
+    top: 0;
+}
+
+.main__block > div {
+    position: absolute;
+    width: 50%;
+    height: 50%;
 }
 
 
@@ -216,6 +242,9 @@ section{
     overflow-x: hidden;
 }
 
+.waves img {
+    width: 100%;
+}
 
 
 /* NEW SECTION STYLES */
@@ -720,7 +749,11 @@ section{
 
 
 
-
+@media (max-width: 1440px) {
+    .main__bc {
+        padding-top: 0;
+    }
+}
 
 @media (max-width: 1024px) {
 
@@ -728,8 +761,20 @@ section{
         height: 93vh;
     }
 
+    .main__bc-pic {
+        width: 83vw;
+        height: 83vw;
+        padding-top: 27vw;
+        padding-left: 20vw;
+    }
+
     .main__centre {
-        left: 40.7%;
+        top: 33%;
+        left: 42.7%;
+    }
+
+    .main__centre img {
+        width: 19vw;
     }
 }
 
@@ -747,9 +792,20 @@ section{
         height: 93vh;
     }
 
+    .main__bc-pic {
+        width: 93vw;
+        height: 93vw;
+        padding-top: 80vw;
+        padding-left: 6vw;
+    }
+
     .main__centre {
-        top: 42.5%;
-        left: 37.7%;
+        top: 35%;
+        left: 38%;
+    }
+
+    .main__centre img {
+        width: 32vw;
     }
 
     .catalog > p {
@@ -1016,7 +1072,6 @@ section{
 
     .contacts__time div {
         height: 36vw;
-        visibility: visible;
         margin-left: 23vw;
         margin-top: 7vw;
      }
@@ -1034,10 +1089,24 @@ section{
         margin-bottom: 22%;
     }
 
-    .main__centre {
-        top: 39.5%;
-        left: 28.7%;
+    .main__bc-pic {
+        width: 110vw;
+        height: 110vw;
+        padding-top: 80vw;
+        padding-left: 0vw;
+        margin-left: -4vw;
+        margin-top: 17vw;
     }
+
+    .main__centre {
+        top: 38.5%;
+        left: 30.7%;
+    }
+
+    .main__centre img {
+        width: 42vw;
+    }
+
 
     /* CATALOG */
     .catalog {

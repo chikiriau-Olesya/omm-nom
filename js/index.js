@@ -1,4 +1,20 @@
-// Scroll animations
+/////// first screen animations ////////
+
+let mainBc = document.querySelector('.main__bc-pic')
+
+let mainBcAnime = anime({
+  targets: mainBc,
+  translateY: ['-23vw', '-23vw'],
+  rotate: ['0', 360],
+  scale: [1.7 , 1.7],
+  easing: 'linear',
+  direction: 'alternate',
+  duration: 95000,
+  loop: true
+})
+
+
+/////////// Scroll animations //////////
 
 // add library
 let controller = new ScrollMagic.Controller()
@@ -55,15 +71,7 @@ new ScrollMagic.Scene({
 
 
 
-
-
-
-
-
-
-
-// Open hours btn
-
+// Open hours btn in contact section
 const weekBtn = document.querySelector('.week')
 const weekendsBtn = document.querySelector('.weekends')
 let timeWeek  = document.querySelector('.contacts__time__monday')
