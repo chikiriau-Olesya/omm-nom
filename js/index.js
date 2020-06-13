@@ -1,4 +1,4 @@
-/////// first screen animations ////////
+/////// FIRST SCREEN ANIMATIONS ////////
 
 let mainBc = document.querySelector('.main__bc-pic')
 
@@ -14,11 +14,22 @@ let mainBcAnime = anime({
 })
 
 
-/////////// Scroll animations //////////
+setTimeout(function () {
+  mainBc.classList.add('main__bc-animation')
+}, 3000)
+
+
+
+
+
+
+
+
+
+/////////// SCROLL ANIMATIONS //////////
 
 // add library
 let controller = new ScrollMagic.Controller()
-
 
 //first feauture
 let featureTitleOne = document.querySelector('.feature__one')
@@ -33,7 +44,7 @@ let featureTitleOneAnime  = anime({
 let featureTitleTwo = document.querySelector('.feature__two')
 let featureTitleTwoAnime  = anime({
   targets: featureTitleTwo,
-  translateX: ['-20vw', '50vw'],
+  translateX: ['-50vw', '50vw'],
   easing: 'linear',
   autoplay: false
 })
@@ -42,7 +53,7 @@ let featureTitleTwoAnime  = anime({
 let featureTitleThree = document.querySelector('.feature__three')
 let featureTitleThreeAnime  = anime({
   targets: featureTitleThree,
-  translateX: ['-30vw', '60vw'],
+  translateX: ['-1vw', '-30vw'],
   easing: 'linear',
   autoplay: false
 })
@@ -51,7 +62,7 @@ let featureTitleThreeAnime  = anime({
 let featureTitleFour = document.querySelector('.feature__four')
 let featureTitleFourAnime  = anime({
   targets: featureTitleFour,
-  translateX: ['-40vw', '40vw'],
+  translateX: ['-40vw', '30vw'],
   easing: 'linear',
   autoplay: false
 })
@@ -70,8 +81,8 @@ new ScrollMagic.Scene({
 })
 
 
+//////// OPEN HOURS IN CONTACT SECTION///////
 
-// Open hours btn in contact section
 const weekBtn = document.querySelector('.week')
 const weekendsBtn = document.querySelector('.weekends')
 let timeWeek  = document.querySelector('.contacts__time__monday')
@@ -80,9 +91,13 @@ let timeWeekends  = document.querySelector('.contacts__time__saturday')
 weekBtn.onclick = function() {
     timeWeek.style.visibility = 'visible'
     timeWeekends.style.visibility = 'hidden'
+    weekBtn.style.color = 'var(--pink)'
+    weekendsBtn.style.color = 'var(--blue)'
 }
 
 weekendsBtn.onclick = function() {
     timeWeekends.style.visibility = 'visible'
     timeWeek.style.visibility = 'hidden'
+    weekendsBtn.style.color = 'var(--pink)'
+    weekBtn.style.color = 'var(--blue)'
 }

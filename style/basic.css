@@ -154,8 +154,11 @@ footer {
 
 .footer__block p,
 .footer__block a {
-    margin-bottom: 1vw;
+    margin-bottom: .7vw;
+    font-size: 1.25vw;
+    font-weight: 400;
 }
+
 
   /* sosials icons */
 .footer__block__socials {
@@ -301,6 +304,11 @@ footer {
         height: 4vw;
     }
 
+    .footer__block p,
+    .footer__block a {
+        font-size: 2.25vw;
+    }
+
 }
 
 @media(max-width: 425px) {
@@ -329,5 +337,11 @@ footer {
 
     .footer__info {
         margin-top: 14vw;
+    }
+
+    .footer__block p,
+    .footer__block a {
+        font-size: 3.3vw;
+        margin-bottom: 2vw;
     }
 }
