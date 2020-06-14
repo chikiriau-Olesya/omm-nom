@@ -1,10 +1,48 @@
+/////////// INGREDIENTS ////////
+let showIngredBtn = document.querySelector('.card__product__ingred')
+let ingredWindow = document.querySelector('.ingred')
+let closeIngredWindow = document.querySelector('.ingred__content__close')
+
+//open general window
+showIngredBtn.onclick = () => {
+    ingredWindow.classList.add('ingred-active')
+}
+
+closeIngredWindow.onclick = () => {
+    ingredWindow.classList.remove('ingred-active')
+}
+
+//open full description window
+let fullIngred = document.querySelector('.ingred__content__desc')
+let showFullIngred = document.querySelector('.ingred__contnet__show')
+let closeFullIngred = document.querySelector('#closeDesc')
+
+let fullIngredAnime = anime({
+    targets:  fullIngred,
+    translateX: ['85vw', '0vw'],
+    easing: 'easeOutExpo',
+    durstion: 3000,
+    autoplay: false
+})
+let fullIngredCloseAnime = anime({
+    targets:  fullIngred,
+    translateX: ['0vw', '85vw'],
+    easing: 'easeOutExpo',
+    durstion: 3000,
+    autoplay: false
+})
+showFullIngred.onclick = fullIngredAnime.play
+closeFullIngred.onclick = fullIngredCloseAnime.play
+
+
+
+/////////// POPUP WINDOW/////////
+
 //color palete for generate circles
 const backgroundColor = [
     'var(--pink)',
     'var(--grey)',
 ]
-
-
 let btn = document.querySelector('.button')
 let closePopup = document.querySelector('.close-popup')
 let popup = document.querySelector('.popup')
