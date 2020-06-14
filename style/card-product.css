@@ -3,6 +3,7 @@
 
 body {
     overflow: hidden;
+    position: relative;
 }
 
 .card {
@@ -205,7 +206,7 @@ body {
 .popup {
     position: fixed;
     z-index: 9999 !important;
-    top: 40%;
+    top: 30%;
     left: 30%;
 
     background-color: var(--pink);
@@ -252,6 +253,201 @@ body {
 .popup p {
     padding-left: 5vw;
     padding-right: 5vw;
+}
+
+
+/* ingredients window */
+.ingred {
+    position: absolute;
+    top: 8.5%;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+}
+
+.ingred__bc {
+    background-color: var(--blue);
+    opacity: .6; 
+    width: 100%;
+    height: 100%;
+}
+
+.ingred__content {
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    top: 5%;
+    left: 14%;
+    width: 68vw;
+    height: 42vw;
+    padding: 2vw;
+    overflow: hidden;
+}
+
+.ingred__content__close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ingred__content__close svg {
+    cursor: pointer;
+    width: 5vw;
+    margin-right: -1vw;
+}
+
+.ingred__content h2 {
+    color: var(--blue);
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+.ingred__content__block {
+    display: flex;
+    margin-top: 4vw;
+}
+
+.ingred__content__block__box {
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    padding: 2vw;
+}
+
+.ingred__content__block__box-percent {
+    font-size: 4.8vw;
+    margin-bottom: 1vw;
+}
+
+.ingred__content__block__box:nth-of-type(odd) {
+    background-color: var(--pink);
+}
+
+.ingred__content__block__box:nth-of-type(even) {
+    background-color: var(--blue);
+}
+
+.ingred__content__block__box:first-of-type {
+    width: 15vw;
+    transform: translate(0vw, 5vw);
+}
+
+.ingred__content__block__box:nth-of-type(2) {
+    width: 12vw;
+    transform: translate(-2vw, -1vw);
+}
+
+.ingred__content__block__box:nth-of-type(3) {
+    width: 14vw;
+    transform: translate(-5vw, 7vw);
+}
+
+.ingred__content__block__box:nth-of-type(4) {
+    width: 11vw;
+    transform: translate(-8vw, 0vw);
+}
+
+/* elements */
+.ingred__content__el {
+    margin-top: 13vw;
+}
+
+.ingred__content__el span{
+    color: var(--grey);
+    font-size: 12px;
+}
+
+.ingred__content__el__line {
+    display: flex;
+    margin-top: 1.5vw;
+}
+
+.ingred__content__el__line__block {
+    display: flex;
+}
+
+.ingred__content__el__line__block-item {
+    margin-right: 5vw;
+    display: flex;
+}
+
+.ingred__content__el__line__block-item-text {
+    margin-left: 1vw;
+}
+
+.text-title,
+.text-number  {
+    font-weight: 600;
+}
+
+.text-title {
+    font-size: 14px;
+    color: var(--pink);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.text-number {
+    font-size: 24px;
+    color: var(--blue);
+}
+
+/* open full product desc btn */
+.ingred__contnet__show {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    color: var(--blue);
+    font-weight: 600;
+    right: -1vw;
+    cursor: pointer;
+}
+
+.ingred__contnet__show img {
+    margin-left: 1.4vw;
+}
+
+.ingred__contnet__show p{
+    font-size: 14px;
+    transform: translate(0vw, -22px) rotate(-90deg);
+}
+
+/* full product desc */
+.ingred__content__desc {
+    background-color: white;
+    box-shadow: -14px 0px 15px rgba(0, 36, 177, 0.05);
+    border-radius: 15px;
+    height: 46vw;
+    width: 30vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--blue);
+    font-size: 14px;
+    padding: 3vw 2vw 0vw 5vw;
+
+    /* change in js */
+    transform: translateX(45vw);
+}
+
+.ingred__content__desc  {
+    font-size: 18px;
+}
+
+.ingred__content__decs__bottom {
+    color: var(--grey);
+    position: absolute;
+    margin-top: 3vw;
+}
+
+.ingred__content__decs__bottom  p{
+    font-size: 14px;
+}
+
+.arrow-from {
+    position: absolute;
+    left: 23px;
+    top: 40%;
 }
 
 
