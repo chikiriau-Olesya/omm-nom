@@ -14,8 +14,18 @@ closeIngredWindow.onclick = () => {
 
 //open full description window
 let fullIngred = document.querySelector('.ingred__content__desc')
+let fullIngredIsShow = document.querySelector('.ingred__content__desc-isShow')
 let showFullIngred = document.querySelector('.ingred__contnet__show')
 let closeFullIngred = document.querySelector('#closeDesc')
+
+let fullIngredCloseAnime = anime({
+    targets:  fullIngred,
+    translateX: ['0vw', '85vw'],
+    easing: 'easeOutExpo',
+    durstion: 3000,
+    autoplay: false
+})
+closeFullIngred.onclick = fullIngredCloseAnime.play
 
 let fullIngredAnime = anime({
     targets:  fullIngred,
@@ -24,15 +34,8 @@ let fullIngredAnime = anime({
     durstion: 3000,
     autoplay: false
 })
-let fullIngredCloseAnime = anime({
-    targets:  fullIngred,
-    translateX: ['0vw', '85vw'],
-    easing: 'easeOutExpo',
-    durstion: 3000,
-    autoplay: false
-})
-showFullIngred.onclick = fullIngredAnime.play
-closeFullIngred.onclick = fullIngredCloseAnime.play
+showFullIngred.onclick =  fullIngredAnime.play
+
 
 
 

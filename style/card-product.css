@@ -690,6 +690,11 @@ body {
         padding: 4vw 3vw 0vw 7vw;
     }
 
+    .card__product__ingred {
+        font-size: 1.8vw;
+        padding-left: 21vw;
+    }
+
 }
 
 @media (max-width: 425px) {
@@ -807,6 +812,12 @@ body {
         height: 180vw;
         width: 55vw;
         padding: 4vw 7vw 0vw 12vw;
+    }
+
+    .card__product__ingred {
+        font-size: 2.8vw;
+        padding-top: 4vw;
+        padding-left: 14vw;
     }
 
 }
