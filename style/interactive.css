@@ -64,6 +64,7 @@ h2 {
 
 .candy {
     position: absolute;
+    cursor: pointer;
 }
 
 .candy:nth-of-type(2) {
@@ -143,6 +144,8 @@ h2 {
     margin: 0 auto;
     margin-top: 10vw;
     margin-right: 0;
+    cursor: pointer;
+    border-radius: 2px;
 }
 
 .window__present {
@@ -196,6 +199,7 @@ h2 {
     height: 23vw;
     border-radius: 5px;
     margin-top: 3vw;
+    overflow: hidden;
 }
 
 
@@ -211,4 +215,30 @@ h2 {
     100% {
         opacity: 1;
     }
+}
+
+@media (max-width: 1024px) {
+    .content {
+        /* width: 120%; */
+        margin: 0 auto;
+        margin-top: -10vw;
+        margin-left: -2vw;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .header__link {
+        display: none;
+    }
+
+    .content{
+        margin: 0 auto;
+        margin-top: 0;
+        margin-left: 0;
+        margin-top: 13vw;
+        margin-left: -24vw;
+        width: 154%;
+    }
+
 }

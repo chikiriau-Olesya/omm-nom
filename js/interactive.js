@@ -21,16 +21,16 @@ let candyLeftAnim = anime({
     loop: true
 })
 
-// let candyRightAnim = anime({
-//     targets: candyRight,
-//     translateX: ['-10vw','20vw'],
-//     translateY: ['-20vw','50vw'],
-//     rotate: [-16, -90],
-//     easing: 'linear',
-//     duration: 4000,
-//     direction: 'alternate',
-//     loop: true
-// })
+let candyRightAnim = anime({
+    targets: candyRight,
+    translateX: ['-10vw','20vw'],
+    translateY: ['-20vw','50vw'],
+    rotate: [-16, -90],
+    easing: 'linear',
+    duration: 4000,
+    direction: 'alternate',
+    loop: true
+})
 
 
 let showWindowPresent = document.querySelector('.window__present')
