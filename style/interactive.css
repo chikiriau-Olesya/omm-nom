@@ -210,6 +210,10 @@ h2 {
     height: 35vw;
 }
 
+.window__crad-compos h2 {
+    margin-top: 2vw;
+}
+
 .window__cross {
     cursor: pointer;
     position: absolute;
