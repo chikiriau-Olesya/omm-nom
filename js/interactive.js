@@ -1,5 +1,5 @@
 //////////// START SCREEN ////////
-let startBtn = document.querySelector('.window__card__btn')
+let startBtn = document.querySelector('#startBtn')
 let startWindow = document.querySelector('#startWindow')
 
 startBtn.onclick = () => {
@@ -9,6 +9,8 @@ startBtn.onclick = () => {
 //////// CANDY ANIMATIONS /////
 let candyLeft = document.querySelector('#candy-left')
 let candyRight = document.querySelector('#candy-right')
+let candyTop = document.querySelector('.candy-top')
+let candyBottom = document.querySelector('#candy-bottom')
 
 let candyLeftAnim = anime({
     targets: candyLeft,
@@ -32,22 +34,91 @@ let candyRightAnim = anime({
     loop: true
 })
 
+let candyTopAnim = anime({
+    targets: candyTop,
+    translateX: ['-12vw','20vw'],
+    translateY: ['-18vw','45vw'],
+    rotate: [-186, -90],
+    easing: 'linear',
+    duration: 6000,
+    direction: 'alternate',
+    loop: true
+})
+
+let candyBottomAnim = anime({
+    targets: candyBottom,
+    translateX: ['-3vw','35vw'],
+    translateY: ['-10vw','45vw'],
+    rotate: [-256, -90],
+    easing: 'linear',
+    duration: 7500,
+    direction: 'alternate',
+    loop: true
+})
+
 
 let showWindowPresent = document.querySelector('.window__present')
-let showWindowComposition = document.querySelector('.window__compos')
-let closeWindowComposition =  document.querySelector('.window__cross')
+let showWindowPoster = document.querySelector('.window__poster')
+let showWindowComposition = document.querySelector('.window__compos-one')
+let closeWindowComposition =  document.querySelector('.window__cross-one')
+let showWindowCircles = document.querySelector('.window__circles')
+let windowCardCircles =  document.querySelector('.window__card-circles')
+
+//functions for add and remove visible class to open windows
+function addVisibleClass(e) {
+    e.classList.add('window__open-active')
+}
+function removeVisibleClass(e) {
+    e.classList.remove('window__open-active')
+}
+
 
 candyLeft.onclick = () => {     
-    showWindowPresent.classList.add('window__open-active')
+    addVisibleClass(showWindowPresent)
     setTimeout(function() {
-        showWindowPresent.classList.remove('window__open-active')
+        removeVisibleClass(showWindowPresent)
+    }, 4000)
+}
+
+candyBottom.onclick = () => {     
+    addVisibleClass(showWindowPoster)
+    setTimeout(function() {
+        removeVisibleClass(showWindowPoster)
     }, 4000)
 }
 
 candyRight.onclick = () => {     
-    showWindowComposition.classList.add('window__open-active')
+    addVisibleClass(showWindowComposition)
+}
+closeWindowComposition.onclick = () => {     
+    removeVisibleClass(showWindowComposition)
 }
 
-closeWindowComposition.onclick = () => {     
-    showWindowComposition.classList.remove('window__open-active')
+//special functions for generate circles window
+candyTop.onclick = () => {     
+    windowCardCircles.style.visibility = 'visible'
+    addVisibleClass(showWindowCircles)
+    setTimeout(function() {
+        windowCardCircles.style.visibility = 'hidden'
+    }, 4000)
+
+    setTimeout(function() {
+        removeVisibleClass(showWindowCircles)
+    }, 10000)
+
+    //generate circles
+    let numberOfCircles = 40
+    for(let i = 0; i < numberOfCircles; i++) {
+        let divCircle = document.createElement('div')
+        divCircle.classList.toggle('div__circle')
+        divCircle.style.position = 'absolute'
+        divCircle.style.backgroundColor = 'var(--pink)'
+        divCircle.style.transform = `translate(${anime.random(0,90)}vw, ${anime.random(0,10)}vh)`
+        document.body.append(divCircle)
+
+        setTimeout(function() {
+            divCircle.style.display = 'none'
+        }, 10000)
+    }
 }
+

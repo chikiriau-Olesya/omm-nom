@@ -61,8 +61,11 @@
 
         <div class="content">
             <div class="content__line">
-                <div class="content__line__block">
+                <div class="content__line__block ignoreMe">
                     <img src="../img/interactive-1.svg" alt="">
+                    <div class="candy candy-top jGravity" id="candy-top">
+                        <img src="../img/interactive-candy.png" alt="" class="candy-img">
+                    </div>
                 </div>
                 <div class="content__line__block">
                     <img src="../img/interactive-2.svg" alt="">
@@ -80,6 +83,9 @@
             <div class="content__line">
                 <div class="content__line__block">
                     <img src="../img/interactive-1.svg" alt="">
+                    <div class="candy">
+                        <img src="../img/interactive-candy.png" alt="" class="candy-img" id="candy-bottom">
+                    </div>
                 </div>
                 <div class="content__line__block">
                     <img src="../img/interactive-2.svg" alt="">
@@ -92,7 +98,7 @@
                 <div class="window__card">
                     <h2>добро пожаловать в&nbsp;калейдоскоп идей!</h2>
                     <p>Ловите сладости от&nbsp;конфетного магазина идей и&nbsp;смотрите, что они скрывают внутри</p>
-                    <div class="window__card__btn">Начать</div>
+                    <div class="window__card__btn" id="startBtn">Начать</div>
                 </div>
             </div>
 
@@ -105,10 +111,30 @@
                 </div>
             </div>
 
-            <div class="window window__compos">
+            <div class="window window__poster">
+                <div class="window__bc"></div>
+                <div class="window__card window__crad-present window__crad-poster">
+                    <h2> Генератор идей</h2>
+                    <p>создавайте уникальные полотна вместе с ОММ НОМ</p>
+                    <img src="../img/interactive-poster.svg" alt="" class="present-img">
+                    <div class="window__card__btn window__card__btn-poster">
+                        <a href="https://chikiriau-olesya.github.io/OmmNom/">Создать</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="window window__circles">
+                <div class="window__bc"></div>
+                <div class="window__card window__crad-present window__card-circles">
+                    <h2>Драже ОММ НОМ</h2>
+                    <p>Удивительные драже ОММ НОМ подарят легкие быстрые идеи. Ловите конфеты и развлекайтесь!</p>
+                </div>
+            </div>
+
+            <div class="window window__compos-one">
                 <div class="window__bc"></div>
                 <div class="window__card window__crad-compos">
-                    <div class="window__cross">
+                    <div class="window__cross window__cross-one">
                         <svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2.09375 1.47323L28.8222 26.9759M2.09375 26.9759L28.8222 1.47217" stroke="var(--blue)" stroke-width="4" stroke-linejoin="bevel"/>
                         </svg>
@@ -120,15 +146,21 @@
                    </div>
                 </div>
             </div>
+
         </div>
 
     
     </div>
 
-    <script src="../js/basic.js"></script>
+   <script src="../js/basic.js"></script>
    <script src="../js/anime.min.js"></script>
    <script src="../js/p5.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
    <script src="../js/sketch.js"></script>
+   <script type="text/javascript" src="../js/jGravity.js"> </script>
+   <script type="text/javascript" src="../js/gravity-anim.js"> </script>
+   <!-- <script src="../js/sketchTwo.js"></script> -->
    <script src="../js/interactive.js"></script>
 </body>
 </html>

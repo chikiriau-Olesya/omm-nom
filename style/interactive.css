@@ -28,7 +28,7 @@ h2 {
 }
 
 .content {
-    margin-top: -10vw;
+    margin-top: -15vw;
     grid-column: 1 / 6;
     background-color: var(--blue);
     width: 100%;
@@ -38,6 +38,7 @@ h2 {
 .content__line {
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .content__line:nth-of-type(2) {
@@ -69,6 +70,21 @@ h2 {
 
 .candy:nth-of-type(2) {
     right: 0;
+}
+
+.candy:nth-of-type(4) {
+    right: 0;
+}
+
+.content__line__block:first-of-type .candy {
+    top: 0;
+}
+.content__line__block:nth-of-type(2) .candy {
+    bottom: 0;
+}
+
+.content__line__block .candy img {
+    width: 20vw;
 }
 
 .candy-img {
@@ -118,7 +134,7 @@ h2 {
 
 .window__card {
     position: absolute;
-    top: 22%;
+    top: 25%;
     left: 34%;
     background-color: white;
     border-radius: 10px;
@@ -148,9 +164,13 @@ h2 {
     border-radius: 2px;
 }
 
-.window__present {
+.window__present,
+.window__compos-one,
+.window__circles,
+.window__poster {
     visibility: hidden;
 }
+
 
 .window__crad-present h2 {
     margin-top: 3vw;
@@ -165,8 +185,22 @@ h2 {
    width: 23vw;
 }
 
-.window__compos {
-    visibility: hidden;
+.window__crad-poster img {
+   width: 15vw;
+}
+
+.window__card__btn-poster {
+    width: 6vw;
+    margin-top: 2vw;
+}
+
+.window__card__btn-poster a{
+    color: white;
+    font-size: 1.3vw;
+}
+
+.window__card-circles {
+    height: 21vw;
 }
 
 .window__crad-compos {
@@ -215,6 +249,17 @@ h2 {
     100% {
         opacity: 1;
     }
+}
+
+/* for new generate elements */
+.div__circle {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    z-index: 2;
+    top: -20vw;
+    transform: all .33s ease;
+    cursor: grab;
 }
 
 @media (max-width: 1024px) {
