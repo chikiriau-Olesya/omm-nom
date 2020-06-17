@@ -106,6 +106,7 @@ section{
     height: 22vw;
     width: 30vw;
     margin-top: 5%;
+    border-radius: 3px;
 
     background-color: var(--grey);
 }
@@ -117,7 +118,6 @@ section{
 }
 
    /* all content in block (link & pictures) */
-
 .catalog__menu__links__block {
     margin-bottom: 5%;
     position: relative;
@@ -158,7 +158,6 @@ section{
 }
 
    /* edit posistion of pictures */
-
 .catalog__menu__links__block-hover-choc {
     transform: translate(30vw, 4vw);
 }
@@ -193,7 +192,6 @@ section{
 }
 
 
-
   /* menu background */
 .catalog__back {
     background-color: var(--blue);
@@ -202,6 +200,7 @@ section{
     margin-top: 11%;
     width: 68vw;
     height: 27vw;
+    border-radius: 3px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -440,6 +439,7 @@ section{
     margin-left: 7vw;
     width: 37vw;
     height: 35vw;
+    border-radius: 3px;
     background-color: white;
 }
 
@@ -500,6 +500,8 @@ section{
     margin-bottom: 0;
     overflow: hidden;
     background-color: var(--blue);
+    padding-top: 3vw;
+    padding-bottom: 3vw;
 }
 
 .interactive__wrapper {
@@ -511,66 +513,59 @@ section{
     position: relative;
 }
 
+.interactive__wrapper-block:nth-of-type(2) {
+   text-align: center;
+   margin: 0 auto;
+}
+
 .interactive a {
     font-size: 2.8vw;
-    color: var(--blue);
+    color: white;
     text-align: center;
-    position: absolute;
-    top: 7vw;
-    left: 6.5vw;
+    margin: 0 auto;
 }
 
 .interactive a:hover {
     color: var(--pink);
 }
 
-.interacrive__wrapper-block-shape {
-    z-index: 2;
+.interactive__wrapper-block:nth-of-type(3) {
+    margin-right: 0;
 }
 
 .interacrive__wrapper-block-candy {
-    width: 10vw;
-    position: absolute;
-    top: 0;
-}
-.interacrive__wrapper-block-candy {
     width: 15vw;
-    position: absolute;
-    z-index: 1;
-    top: 0;
 }
 
 .candy-left {
-    left: 0;
     animation: leftCandy 8s linear infinite;
 }
 
 @keyframes leftCandy {
     0%{
-        transform: translate(-20vw, -10vw) rotate(0deg);
+        transform: translate(-16vw, -10vw) rotate(0deg);
     }
     50% {
-        transform: translate(18vw, 25vw) rotate(90deg);
+        transform: translate(32vw, 25vw) rotate(90deg);
     }
     100% {
-        transform: translate(-20vw, -10vw) rotate(0deg); 
+        transform: translate(-16vw, -10vw) rotate(0deg); 
     }
 }
 
 .candy-right {
-    right: 0;
     animation: rightCandy 8s linear infinite;
 }
 
 @keyframes rightCandy {
     0%{
-        transform: translate(18vw, 25vw) rotate(90deg);
+        transform: translate(22vw, 25vw) rotate(90deg);
     }
     50% {
         transform: translate(-20vw, -10vw) rotate(0deg);
     }
     100% {
-        transform: translate(18vw, 25vw) rotate(90deg);
+        transform: translate(22vw, 25vw) rotate(90deg);
     }
 }
 
@@ -620,6 +615,7 @@ section{
     margin-left: 7vw;
     width: 37vw;
     height: 35vw;
+    border-radius: 3px;
     background-color: white;
 }
 
@@ -784,6 +780,7 @@ section{
     background-color: white;
     padding: 3%;
     width: 40%;
+    border-radius: 3px;
 }
 
 .contacts__text h2 {
@@ -1211,12 +1208,6 @@ section{
     }
 
     .main__bc-pic {
-        /* width: 110vw;
-        height: 110vw;
-        padding-top: 80vw;
-        padding-left: 0vw;
-        margin-left: -4vw;
-        margin-top: 17vw; */
         width: 130vw;
         height: 130vw;
         padding-top: 80vw;
@@ -1357,8 +1348,20 @@ section{
     }
 
     /* FEATURES */
+
+    .features {
+        margin-top: 20%;
+        margin-bottom: 30%;
+    }
+
+    .features p:first-of-type {
+        font-size: 11vw;
+        margin-bottom: 7.7vw;
+    }
+
     .features p {
-        font-size: 100px;
+        font-size: 28px;
+        margin-bottom: 4vw;
     }
 
     /* EVENTS */
@@ -1412,6 +1415,10 @@ section{
     .contacts__time div {
         margin-left: 7vw;
         margin-top: 7vw;
+    }
+
+    .contacts__time p {
+        font-size: 100px;
     }
     
 }

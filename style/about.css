@@ -201,6 +201,7 @@ header {
     background-color: var(--blue);
     text-align: center;
     transform: translateY(-2vw);
+    border-radius: 3px;
 }
 
 .photo__main__bc img {
@@ -220,6 +221,7 @@ header {
     background-color: var(--blue);
     text-align: center;
     margin-top: 4vw;
+    border-radius: 3px;
 }
 
 .photo__main__secondFloor__bc img {
@@ -543,7 +545,6 @@ header {
 
 
     /* STYLES FOR BUILDING PAGE */
-
     .photo__main-building {
         margin-bottom: 32%;
     }
@@ -613,6 +614,26 @@ header {
     .photo__list__video iframe {
         height: 38.7vw;
     }
+
+    /* STYLES FOR 1ST FLOOR PAGE */
+    .firstFloor__one {
+        width: 38.55vw;
+    }
+
+    .photo__main__bc img {
+        width: 55vw;
+    }
+
+    /* STYLES FOR 3 FLOOR PAGE */
+
+    .photo__main__thirdFloor__bc {
+        border-radius: 3px;
+        width: 55vw;
+    }
+
+    .photo__main__thirdFloor__bc img {
+        width: 49vw;
+    }
 }
 
 @media (max-width: 425px) {
@@ -640,10 +661,16 @@ header {
 
   .menu__content {
      flex-direction: row;
+     flex-wrap: wrap;
   }
 
   .menu__content a {
-      margin-right: 2vw;
+      margin-right: 5vw;
+      margin-bottom: 3vw;
+  }
+
+  .menu__content a:nth-of-type(2) {
+      margin-right: 60vw;
   }
 
   .text__content {
@@ -790,6 +817,41 @@ header {
 
     .photo__list__video iframe {
         height: 54.7vw;
+    }
+
+    /* STYLES FOR 1 FLOOR PAGE */
+    .photo__main__firstFloor .photo__main__bc {
+        width: 89vw;
+    }
+
+    .firstFloor__one {
+        width: 67.55vw;
+    }
+
+    .photo__main__bc img {
+        width: 77vw;
+    }
+
+    /* STYLES FOR 2 FLOOR PAGE */
+    .photo__main__secondFloor__bc {
+        width: 87vw;
+    }
+    .photo__main__secondFloor__bc img{
+        width: 79vw;
+    }
+
+    /* styles for 3 floor page */
+
+    .photo__main__thirdFloor__bc {
+        width: 76vw;
+    }  
+
+    .photo__main__thirdFloor__bc img {
+        width: 69vw;
+    }
+
+    .photo__main__thirdFloor-first {
+        width: 70vw;
     }
 
 

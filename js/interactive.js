@@ -77,14 +77,14 @@ candyLeft.onclick = () => {
     addVisibleClass(showWindowPresent)
     setTimeout(function() {
         removeVisibleClass(showWindowPresent)
-    }, 4000)
+    }, 5000)
 }
 
 candyBottom.onclick = () => {     
     addVisibleClass(showWindowPoster)
     setTimeout(function() {
         removeVisibleClass(showWindowPoster)
-    }, 4000)
+    }, 5000)
 }
 
 candyRight.onclick = () => {     
@@ -100,11 +100,11 @@ candyTop.onclick = () => {
     addVisibleClass(showWindowCircles)
     setTimeout(function() {
         windowCardCircles.style.visibility = 'hidden'
-    }, 4000)
+    }, 5000)
 
     setTimeout(function() {
         removeVisibleClass(showWindowCircles)
-    }, 10000)
+    }, 14000)
 
     //generate circles
     let numberOfCircles = 40
@@ -118,7 +118,7 @@ candyTop.onclick = () => {
 
         setTimeout(function() {
             divCircle.style.display = 'none'
-        }, 10000)
+        }, 14000)
     }
 }
 
