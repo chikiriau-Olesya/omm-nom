@@ -2,6 +2,7 @@
 let contentMenu = document.querySelector('.content__menu')
 let btnSideMenu = document.querySelector('#btnSideMenu')
 let btnSideMenuHide = document.querySelector('#btnSideMenuHide')
+let btnReset = document.querySelector('.content__menu__inner__block__new')
 
 
 
@@ -96,4 +97,9 @@ function gragAndGrop() {
             }
         }
     }
+}
+
+///reset 
+btnReset.onclick = function(e) {
+    window.location.reload(false); 
 }
