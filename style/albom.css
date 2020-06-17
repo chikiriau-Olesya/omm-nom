@@ -1,0 +1,156 @@
+/* add basic styles which are used in all pages */
+@import "basic.css";
+
+body {
+    background-color: var(--blue);
+    overflow: hidden;
+}
+
+h2 {
+    font-size: 2.2vw;
+}
+
+.header {
+    z-index: 5;
+}
+
+.header__link {
+    margin: 0 auto;
+    background-color: white;
+    padding-top: 1vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__link span:hover {
+    color: var(--blue);
+}
+
+.content {
+    position: relative;
+    display: flex;
+    z-index: 2;
+}
+
+.content__aside {
+    background-color: var(--pink);
+    color: white;
+    text-transform: uppercase;
+    padding: 2vw;
+    font-size: 2vw;
+    width: 2.5vw;
+    margin-top: -20vw;
+    position: absolute;
+}
+
+.content__aside__text img {
+    width: 3vw;
+    animation: textAnime 80s linear infinite;
+}
+@keyframes textAnime {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-50vw);
+    }
+    50% {
+        transform: translateY(0vw);
+    }
+    85% {
+        transform: translateY(-50vw);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.content__menu {
+    background-color: white;
+    width: 25vw;
+    margin-top: -10vw;
+    padding: 3vw;
+    position: relative;
+    padding: 3vw;
+    padding-left: 10vw;
+    transform: translateX(-28vw);
+    z-index: -1;
+    height: 100vw;
+}
+
+.content__menu__inner__arrow {
+    position: absolute;
+    right: 1vw;
+    top: 30vw;
+    cursor: pointer;
+    transition: all .43s linear;
+}
+
+.content__menu__inner__arrow:hover {
+    transform: scale(1.15);
+}
+
+#btnSideMenuHide {
+    display: none;
+}
+
+.content__menu__inner {
+    margin-top: 10vw;
+    color: var(--blue);
+}
+
+.content__menu__inner h2{
+    margin-bottom: 2vw;
+}
+
+.content__menu__inner__block {
+    margin-top: 8vw;
+}
+
+.content__menu__inner__block-text {
+    font-size: 1.7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.content__menu__inner__block-btns {
+    display: flex;
+}
+
+.circle-color {
+    cursor: pointer;
+    margin-top: 1vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-right: 1.45vw;
+    border-radius: 50%;
+}
+
+.circle-color:hover {
+    transform: scale(1.1);
+}
+
+.pink {
+    background-color: var(--pink);
+}
+
+.grey{
+    background-color: var(--grey);
+}
+
+.blue{
+    background-color: var(--blue);
+}
+
+.content__menu__inner__block__shape {
+    margin-top: 4vw;
+}
+
+.canvas-composition {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}

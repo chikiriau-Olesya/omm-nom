@@ -1,7 +1,6 @@
 function setup() {
     let mCanvas = createCanvas(windowWidth, windowHeight);
-    mCanvas.parent("canvasTwo");
-    background('#0018B8');
+    mCanvas.parent("canvas");
   }
   
 function draw() {
