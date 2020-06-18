@@ -1,19 +1,10 @@
+/////////// SIDE MENU //////////
 
 let contentMenu = document.querySelector('.content__menu')
 let btnSideMenu = document.querySelector('#btnSideMenu')
 let btnSideMenuHide = document.querySelector('#btnSideMenuHide')
 let btnReset = document.querySelector('.content__menu__inner__block__new')
 
-
-
-// let contentMenuShowAnime = anime({
-//     targets:  contentMenu,
-//     translateX: ['-28vw', '0vw'],
-//     easing: 'easeOutExpo',
-//     durstion: 3000,
-//     autoplay: false
-// })
-// btnSideMenu.onclick = contentMenuShowAnime.play
 btnSideMenu.onclick = () => {
     contentMenu.style.transform = 'translateX(0vw)'
     contentMenu.style.transition = 'all .3s linear'
@@ -27,7 +18,7 @@ btnSideMenuHide.onclick = () => {
     btnSideMenuHide.style.display = 'none'
 }
 
-
+////// CHANGE BACKGROUND COLORS ///////
 let bodyColor = document.querySelector('body')
 let pinkColorBtn = document.querySelector('.pink')
 let greyColorBtn = document.querySelector('.grey')
@@ -44,7 +35,7 @@ blueColorBtn.onclick = () => {
 }
 
 
-
+/////// ADD NEW SHAPE ////////////
 ///ideas from web-poster
 let numberBorRa = [
     '0%',
@@ -69,7 +60,6 @@ createElBtn.onclick = function() {
 
     gragAndGrop()
 }
-
 
 function gragAndGrop() {
     var newDIv = document.querySelectorAll('.new__shape');

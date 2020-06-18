@@ -266,6 +266,10 @@ h2 {
     cursor: grab;
 }
 
+.window__crad-poster img {
+    width: 19vw;
+}
+
 @media (max-width: 1024px) {
     .content {
         /* width: 120%; */
