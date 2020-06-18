@@ -78,6 +78,7 @@ h2 {
     padding: 3vw;
     padding-left: 10vw;
     transform: translateX(-28vw);
+    transform: translateX(0vw);
     z-index: 0;
     height: 100vw;
 }
@@ -94,7 +95,7 @@ h2 {
     transform: scale(1.15);
 }
 
-#btnSideMenuHide {
+#btnSideMenu {
     display: none;
 }
 

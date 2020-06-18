@@ -5,18 +5,19 @@ let btnSideMenu = document.querySelector('#btnSideMenu')
 let btnSideMenuHide = document.querySelector('#btnSideMenuHide')
 let btnReset = document.querySelector('.content__menu__inner__block__new')
 
-btnSideMenu.onclick = () => {
-    contentMenu.style.transform = 'translateX(0vw)'
-    contentMenu.style.transition = 'all .3s linear'
-    btnSideMenu.style.display = 'none'
-    btnSideMenuHide.style.display = 'block'
-}
 btnSideMenuHide.onclick = () => {
     contentMenu.style.transform = 'translateX(-28vw)'
     contentMenu.style.transition = 'all .3s linear'
     btnSideMenu.style.display = 'block'
     btnSideMenuHide.style.display = 'none'
 }
+btnSideMenu.onclick = () => {
+    contentMenu.style.transform = 'translateX(0vw)'
+    contentMenu.style.transition = 'all .3s linear'
+    btnSideMenu.style.display = 'none'
+    btnSideMenuHide.style.display = 'block'
+}
+
 
 ////// CHANGE BACKGROUND COLORS ///////
 let bodyColor = document.querySelector('body')
